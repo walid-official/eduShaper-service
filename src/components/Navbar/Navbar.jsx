@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/images/logo1.png"
+import logo from "../../assets/images/logo3.png"
 const Navbar = () => {
   const Links = (
     <>
@@ -16,7 +16,7 @@ const Navbar = () => {
       <li>
         <details>
           <summary className="font-bold" >DashBoard</summary>
-          <ul className="px-8 w-72 bg-gradient-to-r from-[#91d4f1] to-[#cbeaff] ">
+          <ul className="px-8 w-72 z-10">
             <NavLink>
               {" "}
               <li className="py-2 font-bold">Add Service</li>{" "}
@@ -39,7 +39,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="bg-gradient-to-r from-[#91d4f1] to-[#cbeaff] ">
+    <div className=" ">
       <div className="navbar py-0 w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -67,7 +67,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="">
-            <img className="w-36" src={logo} alt="" />
+            <img className="w-40" src={logo} alt="" />
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
