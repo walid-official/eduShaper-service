@@ -92,11 +92,17 @@ const Navbar = () => {
                 Logout
               </Link>
               {user ? (
-                <img
-                  src={user.photoURL}
-                  alt=""
-                  className="w-12 h-12 rounded-full"
-                />
+                <div
+                  className="tooltip tooltip-bottom"
+                  data-tip={user?.displayName}
+                >
+                  <img
+                    referrerPolicy="no-referrer"
+                    src={user?.photoURL}
+                    alt=""
+                    className="w-12 h-12 rounded-full"
+                  />
+                </div>
               ) : (
                 <div className="btn bg-[#8e67f1] flex justify-center items-center w-12 h-12 rounded-full"></div>
               )}

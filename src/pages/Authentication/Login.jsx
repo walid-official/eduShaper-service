@@ -1,11 +1,14 @@
 import React, { useContext } from "react";
 import loginLottieJson from "../../assets/images/login.json";
 import Lottie from "lottie-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 
 const Login = () => {
   const {createSignInUser} = useContext(AuthContext);
+  const navigate = useNavigate(); 
+  const location = useLocation();
   const handleSIgnInUser = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -14,6 +17,7 @@ const Login = () => {
     try {
       const userCredential = await createSignInUser(email, password);
       console.log("User Logged In", userCredential);
+      navigate( location?.state || "/");
     } catch (error) {
       console.log("Error Logging In User", error);
     }
@@ -56,10 +60,11 @@ const Login = () => {
               <p className="text-sm">Don't have an account ? Please <Link to="/register" className="text-[#8e67f1]">Register</Link> </p>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+              <button type="submit" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
                 Login
               </button>
             </div>
+            <GoogleLogin />
           </form>
         </div>
       </div>

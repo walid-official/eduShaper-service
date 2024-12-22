@@ -5,6 +5,7 @@ import Register from "../../pages/Authentication/Register";
 import Login from "../../pages/Authentication/Login";
 import ErrorPage from "../../pages/ErrorPage";
 import AddService from "../../pages/AddService";
+import PrivetRouter from "./PrivetRouter";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path: "add-service",
-        element: <AddService></AddService>,
+        element: <PrivetRouter><AddService></AddService></PrivetRouter>
       },
     ],
   },

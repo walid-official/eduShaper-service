@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import RegisterLottieJson from "../../assets/images/register1.json";
 import Lottie from "lottie-react";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -94,6 +95,7 @@ const Register = () => {
                 Register
               </button>
             </div>
+            <GoogleLogin />
           </form>
         </div>
       </div>
