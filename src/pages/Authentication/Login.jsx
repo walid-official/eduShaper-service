@@ -1,6 +1,7 @@
 import React from "react";
 import loginLottieJson from "../../assets/images/login.json";
 import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
@@ -34,9 +35,10 @@ const Login = () => {
               />
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
+                  Forgot password? 
                 </a>
               </label>
+              <p className="text-sm">Don't have an account ? Please <Link to="/register" className="text-[#8e67f1]">Register</Link> </p>
             </div>
             <div className="form-control mt-6">
               <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">

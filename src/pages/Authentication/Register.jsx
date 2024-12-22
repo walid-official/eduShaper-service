@@ -9,7 +9,7 @@ const Register = () => {
         <div className="w-[50%]">
           <Lottie animationData={RegisterLottieJson} loop={true} />;
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <div className="card bg-base-100 w-full max-w-md shrink-0 shadow-2xl">
           <form className="card-body">
             <div className="form-control">
               <label className="label">
@@ -55,11 +55,11 @@ const Register = () => {
                 required
               />
               <label className="text-sm py-3">
-                Already have an account ? Please <Link to="/login">Login</Link>
+                Already have an account ? Please <Link to="/login" className="text-[#8e67f1]">Login</Link>
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login</button>
+              <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Register</button>
             </div>
           </form>
         </div>

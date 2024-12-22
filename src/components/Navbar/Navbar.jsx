@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo3.png"
 const Navbar = () => {
   const Links = (
     <>
-      <NavLink>
+      <NavLink to="/">
         {" "}
         <li className="pt-2 font-bold">Home</li>{" "}
       </NavLink>
@@ -17,7 +17,7 @@ const Navbar = () => {
         <details>
           <summary className="font-bold" >DashBoard</summary>
           <ul className="px-8 w-72 z-10">
-            <NavLink>
+            <NavLink to="/add-service">
               {" "}
               <li className="py-2 font-bold">Add Service</li>{" "}
             </NavLink>

@@ -3,6 +3,8 @@ import Main from "../../Layouts/Main";
 import Home from "../../pages/Home";
 import Register from "../../pages/Authentication/Register";
 import Login from "../../pages/Authentication/Login";
+import ErrorPage from "../../pages/ErrorPage";
+import AddService from "../../pages/AddService";
 
 const router = createBrowserRouter([
   {
@@ -15,13 +17,21 @@ const router = createBrowserRouter([
       },
       {
         path: "register",
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: "login",
-        element: <Login></Login>
-      }
+        element: <Login></Login>,
+      },
+      {
+        path: "add-service",
+        element: <AddService></AddService>,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 
