@@ -46,7 +46,7 @@ const { user } = useContext(AuthContext);
               <img src="https://img.freepik.com/premium-vector/learning-support-icon-3d-illustration-from-elearning-collection-creative-learning-support-3d-icon-web-design-templates-infographics-more_676904-747.jpg?ga=GA1.1.1662778785.1716400131&semt=ais_hybrid" />
             </motion.div>
           </div>
-          <div className="card bg-base-100  max-w-lg shrink-0 shadow-2xl">
+          <div  className="card bg-base-100  max-w-lg shrink-0 shadow-2xl">
             <form onSubmit={handleAddService} className="card-body">
               <div className="flex gap-3 justify-between">
                 <div className="form-control">  
@@ -106,7 +106,7 @@ const { user } = useContext(AuthContext);
                 <textarea
                   placeholder="Description"
                   name="description"
-                  className="textarea textarea-bordered textarea-lg w-full"
+                  className="textarea textarea-bordered pb-10 w-full"
                 ></textarea>
               </div>
               <div className="form-control mt-6">

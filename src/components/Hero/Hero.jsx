@@ -4,11 +4,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./hero.css";
 import { Pagination,Autoplay } from "swiper/modules";
-import BannerImg from "../../assets/images/banner2.png"
 const Hero = () => {
   return (
     // v className="bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-vector/green-liquid-background-template-with-copy-space-vector-stock_189483-1876.jpg)`}}
-    <div>
+    <div className="py-10">
       <div className="w-[85%] mx-auto">
         <Swiper
             spaceBetween={30}
