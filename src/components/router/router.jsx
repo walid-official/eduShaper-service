@@ -8,6 +8,7 @@ import AddService from "../../pages/AddService";
 import PrivetRouter from "./PrivetRouter";
 import DetailsServices from "../../pages/DetailsServices";
 import ManageService from "../../pages/ManageService";
+import UpdateServices from "../../pages/UpdateServices";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "DetailService/:id",
         element: <PrivetRouter> <DetailsServices></DetailsServices> </PrivetRouter>
+      },
+      {
+        path: "updateService/:id",
+        element: <PrivetRouter> <UpdateServices></UpdateServices> </PrivetRouter>
       },
       {
         path: "ManageService",
