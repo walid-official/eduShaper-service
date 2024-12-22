@@ -21,7 +21,6 @@ const { user } = useContext(AuthContext);
      }
 
      console.log(addServiceData);
-
      try{
         const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/addService`, addServiceData)
         console.log(data);
