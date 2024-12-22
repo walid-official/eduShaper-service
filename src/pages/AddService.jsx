@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import AddServiceImg from "../assets/images/addService.png"
 import { motion } from "motion/react";
+import { AuthContext } from "../components/AuthProvider/AuthProvider";
+import axios from "axios";
 const AddService = () => {
+const { user } = useContext(AuthContext);
+
+  const handleAddService = async (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target);
+    const initialData = Object.fromEntries(formData.entries());
+    const serviceProviderData = {
+      name: user?.displayName,
+      email: user?.email,
+      photoURL: user?.photoURL
+    }
+     const addServiceData = {
+      ...initialData,
+      serviceProviderData
+     }
+
+     console.log(addServiceData);
+
+     try{
+        const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/addService`, addServiceData)
+        console.log(data);
+     }catch(error){
+       console.log(error);
+     }
+  }
+
   return (
     <div>
       <div className="hero min-h-screen">
@@ -20,16 +48,17 @@ const AddService = () => {
             </motion.div>
           </div>
           <div className="card bg-base-100  max-w-lg shrink-0 shadow-2xl">
-            <form className="card-body">
+            <form onSubmit={handleAddService} className="card-body">
               <div className="flex gap-3 justify-between">
                 <div className="form-control">  
                   <label className="label">
-                    <span className="label-text">Name</span>
+                    <span className="label-text">Service Name</span>
                   </label> 
                   <input
                     type="text"
-                    placeholder="Name"
+                    placeholder="Service Name"
                     className="input input-bordered w-full"
+                    name="serviceName"
                     required
                   />
                 </div>
@@ -41,6 +70,7 @@ const AddService = () => {
                     type="text"
                     placeholder="PhotoURl"
                     className="input input-bordered w-full"
+                    name="servicePhoto"
                     required
                   />
                 </div>
@@ -53,6 +83,7 @@ const AddService = () => {
                 <input
                   type="text"
                   placeholder="Price"
+                  name="price"
                   className="input input-bordered"
                   required
                 />
@@ -64,6 +95,7 @@ const AddService = () => {
                 <input
                   type="text"
                   placeholder="Service Area"
+                  name="serviceArea"
                   className="input input-bordered"
                   required
                 />
@@ -74,6 +106,7 @@ const AddService = () => {
                 </label>
                 <textarea
                   placeholder="Description"
+                  name="description"
                   className="textarea textarea-bordered textarea-lg w-full"
                 ></textarea>
               </div>
