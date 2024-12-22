@@ -1,7 +1,15 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/images/logo3.png"
+import React, { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import logo from "../../assets/images/logo3.png";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 const Navbar = () => {
+  const { user, userSignOut } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleSignOUt = () => {
+    userSignOut();
+    navigate("/login");
+  };
+
   const Links = (
     <>
       <NavLink to="/">
@@ -12,10 +20,9 @@ const Navbar = () => {
         {" "}
         <li className="pt-2 font-bold">Services</li>{" "}
       </NavLink>
-
       <li>
         <details>
-          <summary className="font-bold" >DashBoard</summary>
+          <summary className="font-bold">DashBoard</summary>
           <ul className="px-8 w-72 z-10">
             <NavLink to="/add-service">
               {" "}
@@ -71,10 +78,39 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal space-x-8 font-medium">{Links}</ul>
+          <ul className="menu menu-horizontal space-x-8 font-medium">
+            {Links}
+          </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link>
+          {user ? (
+            <div className="flex gap-3 items-center">
+              <Link
+                onClick={handleSignOUt}
+                className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+              >
+                Logout
+              </Link>
+              {user ? (
+                <img
+                  src={user.photoURL}
+                  alt=""
+                  className="w-12 h-12 rounded-full"
+                />
+              ) : (
+                <div className="btn bg-[#8e67f1] flex justify-center items-center w-12 h-12 rounded-full"></div>
+              )}
+            </div>
+          ) : (
+            <Link
+              to="/register"
+              className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+            >
+              Login / Register
+            </Link>
+          )}
+          {/* <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link>
+           <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link> */}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import { auth } from '../../firebase/firebase.init';
 export const AuthContext = createContext();
@@ -9,6 +9,11 @@ const [loading, setLoading] = useState(true);
 const createUser = (email, password) => {
     setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  const createSignInUser = (email, password) => {
+    setLoading(true)
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   const updateUserProfile = (updatedData) => {
@@ -26,6 +31,23 @@ const createUser = (email, password) => {
     });
   }
 
+  
+  const userSignOut = () => {
+    return signOut(auth);
+  }
+
+
+  const signInWithGoogle = () => {
+    setLoading(true)
+    const provider = new GoogleAuthProvider();
+    return signInWithPopup(auth, provider)
+    .then((result) => {
+        console.log(result.user);
+    })
+    .catch(error => {
+        console.log(error);
+    }) 
+  }
 
 
   useEffect(() => {
@@ -47,7 +69,10 @@ const createUser = (email, password) => {
     const eduService = {
         user,
         createUser,
-        updateUserProfile
+        updateUserProfile,
+        createSignInUser,
+        userSignOut,
+        signInWithGoogle
     }
 
 

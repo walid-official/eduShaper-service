@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import loginLottieJson from "../../assets/images/login.json";
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../components/AuthProvider/AuthProvider";
+
 const Login = () => {
+  const {createSignInUser} = useContext(AuthContext);
+  const handleSIgnInUser = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form[0].value;
+    const password = form[1].value;
+    try {
+      const userCredential = await createSignInUser(email, password);
+      console.log("User Logged In", userCredential);
+    } catch (error) {
+      console.log("Error Logging In User", error);
+    }
+  }
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -11,7 +26,7 @@ const Login = () => {
         <Lottie animationData={loginLottieJson} loop={true} />;
         </div>
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
-          <form className="card-body">
+          <form onSubmit={handleSIgnInUser} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
