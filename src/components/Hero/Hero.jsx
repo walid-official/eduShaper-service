@@ -7,7 +7,8 @@ import { Pagination,Autoplay } from "swiper/modules";
 import BannerImg from "../../assets/images/banner2.png"
 const Hero = () => {
   return (
-    <div className="">
+    // v className="bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-vector/green-liquid-background-template-with-copy-space-vector-stock_189483-1876.jpg)`}}
+    <div>
       <div className="w-[85%] mx-auto">
         <Swiper
             spaceBetween={30}
@@ -38,9 +39,14 @@ const Hero = () => {
                   </p>
                 </div>
                 <div className="w-full">
-                  <img
+                  {/* <img
                     className="w-full"
                     src="https://png.pngtree.com/png-clipart/20240306/original/pngtree-3d-rendering-education-learning-cartoon-elements-png-image_14527152.png"
+                    alt=""
+                  /> */}
+                  <img
+                    className="w-full"
+                    src="https://pixcap.com/cdn/library/template/1723654624011/thumbnail/Two_Employees_Are_Working_Together_In_Front_Of_The_Desk_3D_Illustration_transparent_800_emp.webp"
                     alt=""
                   />
                 </div>
@@ -54,7 +60,7 @@ const Hero = () => {
               <div className="w-full">
                 <img
                   className="w-full"
-                  src="https://img.freepik.com/premium-photo/3d-icon-representing-learning-education_977107-26.jpg"
+                  src="https://png.pngtree.com/png-clipart/20240306/original/pngtree-3d-rendering-education-learning-cartoon-elements-png-image_14527152.png"
                   alt=""
                 />
               </div>

@@ -74,7 +74,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal space-x-8 font-medium">{Links}</ul>
         </div>
         <div className="navbar-end">
-          <Link className="btn">Login</Link>
+          <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link>
         </div>
       </div>
     </div>
