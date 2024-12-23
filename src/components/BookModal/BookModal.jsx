@@ -4,6 +4,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
+import toast from "react-hot-toast";
 const BookModal = ({ service }) => {
   const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
@@ -26,7 +27,12 @@ const BookModal = ({ service }) => {
     const bookPurchase = {
       ...bookData,
       serviceStatus: "pending",
+      startDate,
     };
+
+    if (user?.email === serviceProviderData?.email) {
+      return toast.error("Action Is Invalid");
+    }
 
     console.log(bookPurchase);
 
@@ -39,6 +45,7 @@ const BookModal = ({ service }) => {
       console.log(data);
     } catch (error) {
       console.log(error);
+      toast.error(error.message);
     }
   };
 

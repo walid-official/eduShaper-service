@@ -6,28 +6,29 @@ import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 
 const Login = () => {
-  const {createSignInUser} = useContext(AuthContext);
-  const navigate = useNavigate(); 
+  const { createSignInUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const location = useLocation();
-  const handleSIgnInUser = async (e) => {
+  const handleSIgnInUser = (e) => {
     e.preventDefault();
     const form = e.target;
-    const email = form[0].value;
-    const password = form[1].value;
-    try {
-      const userCredential = await createSignInUser(email, password);
-      console.log("User Logged In", userCredential);
-      navigate( location?.state || "/");
-    } catch (error) {
-      console.log("Error Logging In User", error);
-    }
-  }
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createSignInUser(email, password)
+      .then((result) => {
+        console.log(result);
+        navigate(location?.state || "/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="w-50%">
-
-        <Lottie animationData={loginLottieJson} loop={true} />;
+          <Lottie animationData={loginLottieJson} loop={true} />;
         </div>
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
           <form onSubmit={handleSIgnInUser} className="card-body">
@@ -38,6 +39,7 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="email"
+                name="email"
                 className="input input-bordered"
                 required
               />
@@ -49,18 +51,27 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="password"
+                name="password"
                 className="input input-bordered"
                 required
               />
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
-                  Forgot password? 
+                  Forgot password?
                 </a>
               </label>
-              <p className="text-sm">Don't have an account ? Please <Link to="/register" className="text-[#8e67f1]">Register</Link> </p>
+              <p className="text-sm">
+                Don't have an account ? Please{" "}
+                <Link to="/register" className="text-[#8e67f1]">
+                  Register
+                </Link>{" "}
+              </p>
             </div>
             <div className="form-control mt-6">
-              <button type="submit" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+              <button
+                type="submit"
+                className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+              >
                 Login
               </button>
             </div>

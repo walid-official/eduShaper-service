@@ -10,6 +10,7 @@ import DetailsServices from "../../pages/DetailsServices";
 import ManageService from "../../pages/ManageService";
 import UpdateServices from "../../pages/UpdateServices";
 import BookedServices from "../../pages/BookedServices";
+import ServiceToDo from "../../pages/ServiceToDo";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,15 @@ const router = createBrowserRouter([
           <PrivetRouter>
             {" "}
             <BookedServices></BookedServices>   {" "}
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "service-to-do",
+        element: (
+          <PrivetRouter>
+            {" "}
+            <ServiceToDo></ServiceToDo>   {" "}
           </PrivetRouter>
         ),
       },
