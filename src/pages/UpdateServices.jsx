@@ -21,37 +21,37 @@ useEffect(() => {
 
 console.log(updateServices);
 
-  //   const handleUpdateService = async (e) => {
-  //     e.preventDefault();
-  //     const serviceName = e.target.serviceName.value;
-  //     const servicePhoto = e.target.servicePhoto.value;
-  //     const price = e.target.price.value;
-  //     const serviceArea = e.target.serviceArea.value;
-  //     const description = e.target.description.value;
+    const handleUpdateService = async (e) => {
+      e.preventDefault();
+      const serviceName = e.target.serviceName.value;
+      const servicePhoto = e.target.servicePhoto.value;
+      const price = e.target.price.value;
+      const serviceArea = e.target.serviceArea.value;
+      const description = e.target.description.value;
 
-  //     const updateServiceData = {
-  //         serviceName,
-  //         servicePhoto,
-  //         price,
-  //         serviceArea,
-  //         description,
-  //     }
+      const updateServiceData = {
+          serviceName,
+          servicePhoto,
+          price,
+          serviceArea,
+          description,
+      }
 
-  //     try {
-  //       const { data } = await axios.patch(
-  //         `${import.meta.env.VITE_API_URL}/updateService/${id}`,
-  //         updateServiceData
-  //       );
-  //       setUpdateServices(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //   }
-  //   };
+      try {
+        const { data } = await axios.patch(
+          `${import.meta.env.VITE_API_URL}/updateService/${id}`,
+          updateServiceData
+        );
+        setUpdateServices(data);
+      } catch (error) {
+        console.log(error);
+    }
+    };
 
   return (
     <div className="w-11/12 mx-auto my-10">
       <div className="card bg-base-100  max-w-lg shrink-0 shadow-2xl">
-        <form className="card-body">
+        <form onSubmit={handleUpdateService} className="card-body">
           <div className="flex gap-3 justify-between">
             <div className="form-control">
               <label className="label">

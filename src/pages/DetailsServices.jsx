@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
+import BookModal from "../components/BookModal/BookModal";
 
 const DetailsServices = () => {
   const [service, setService] = useState([]);
@@ -20,6 +21,7 @@ const DetailsServices = () => {
   }, []);
   console.log(service);
   const {
+    _id,
     serviceName,
     description,
     servicePhoto,
@@ -69,7 +71,7 @@ const DetailsServices = () => {
               <p className="text-sm font-bold">{description}</p>
               <div className="flex justify-center py-2">
                 <NavLink>
-                  <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+                  <button  onClick={() => document.getElementById("my_modal_4").showModal()} className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
                     Book Now
                   </button>
                 </NavLink>
@@ -94,6 +96,7 @@ const DetailsServices = () => {
             </div>
         </div>
       </div>
+      <BookModal service={service}></BookModal>
     </div>
   );
 };

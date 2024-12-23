@@ -9,6 +9,7 @@ import PrivetRouter from "./PrivetRouter";
 import DetailsServices from "../../pages/DetailsServices";
 import ManageService from "../../pages/ManageService";
 import UpdateServices from "../../pages/UpdateServices";
+import BookService from "../../pages/BookService";
 
 const router = createBrowserRouter([
   {
@@ -29,19 +30,47 @@ const router = createBrowserRouter([
       },
       {
         path: "add-service",
-        element: <PrivetRouter><AddService></AddService></PrivetRouter>
+        element: (
+          <PrivetRouter>
+            <AddService></AddService>
+          </PrivetRouter>
+        ),
       },
       {
         path: "DetailService/:id",
-        element: <PrivetRouter> <DetailsServices></DetailsServices> </PrivetRouter>
+        element: (
+          <PrivetRouter>
+            {" "}
+            <DetailsServices></DetailsServices>{" "}
+          </PrivetRouter>
+        ),
       },
       {
         path: "updateService/:id",
-        element: <PrivetRouter> <UpdateServices></UpdateServices> </PrivetRouter>
+        element: (
+          <PrivetRouter>
+            {" "}
+            <UpdateServices></UpdateServices>{" "}
+          </PrivetRouter>
+        ),
+      },
+      {
+        path: "bookService/:id",
+        element: (
+          <PrivetRouter>
+            {" "}
+            <UpdateServices></UpdateServices>{" "}
+          </PrivetRouter>
+        ),
       },
       {
         path: "ManageService",
-        element: <PrivetRouter> <ManageService></ManageService> </PrivetRouter>
+        element: (
+          <PrivetRouter>
+            {" "}
+            <BookService></BookService>{" "}
+          </PrivetRouter>
+        ),
       },
     ],
   },
