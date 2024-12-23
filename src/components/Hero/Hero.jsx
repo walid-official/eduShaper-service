@@ -59,7 +59,7 @@ const Hero = () => {
               <div className="w-full">
                 <img
                   className="w-full"
-                  src="https://png.pngtree.com/png-clipart/20240306/original/pngtree-3d-rendering-education-learning-cartoon-elements-png-image_14527152.png"
+                  src="https://static.vecteezy.com/system/resources/thumbnails/008/480/504/small_2x/book-and-pencil-education-concept-illustration-for-business-idea-concept-background-free-png.png"
                   alt=""
                 />
               </div>
@@ -87,7 +87,7 @@ const Hero = () => {
               <div className="w-full">
                 <img
                   className="w-full"
-                  src="https://img.freepik.com/premium-photo/3d-icon-representing-learning-education_977107-24.jpg"
+                  src="https://pixcap.com/cdn/library/template/1723748503236/thumbnail/Passion_In_Learning_3D_Illustration_transparent_emp_800.webp"
                   alt=""
                 />
               </div>

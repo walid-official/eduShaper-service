@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="bg-center bg-cover text-white " style={{backgroundImage: `url(https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-68131.jpg)`}}>
       <footer className="flex w-11/12 border-b mx-auto justify-between px-10 py-20">
         <div>
-          <img src={footerLogo} className="w-40" alt="" />
+          <img src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png" className="w-20" alt="" />
           <div className="pl-6">
             <h2 className="font-bold text-xl">Learn from the Best</h2>
             <p className="font-bold">

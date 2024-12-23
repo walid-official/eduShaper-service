@@ -10,6 +10,11 @@ const Navbar = () => {
     navigate("/login");
   };
 
+  const handleThemeChange = (e) => {
+    const theme = e.target.checked ? "aqua" : "light";
+    document.documentElement.setAttribute("data-theme", theme);
+  };
+
   const Links = (
     <>
       <NavLink to="/">
@@ -47,7 +52,7 @@ const Navbar = () => {
   );
   return (
     <div className=" ">
-      <div className="navbar py-0 w-11/12 mx-auto">
+      <div className="navbar py-6 border-b w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -74,7 +79,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="">
-            <img className="w-40" src={logo} alt="" />
+            <img className="w-16" src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png" alt="" />
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -83,6 +88,16 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
+          <div className="pr-2">
+            <label>
+              <input
+                type="checkbox"
+                value="synthwave"
+                className="toggle theme-controller"
+                onChange={handleThemeChange} // Handle theme toggle
+              />
+            </label>
+          </div>
           {user ? (
             <div className="flex gap-3 items-center">
               <Link
