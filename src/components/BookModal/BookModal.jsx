@@ -3,12 +3,13 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import axios from "axios";
 const BookModal = ({ service }) => {
   const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
 
   const {
-    _id,
+    _id: id,
     serviceName,
     description,
     servicePhoto,
@@ -17,15 +18,35 @@ const BookModal = ({ service }) => {
     price,
   } = service || {};
 
-  const handleBookService = (e) => {
+  const handleBookService = async (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const bookData = Object.fromEntries(formData.entries());
+
+    const bookPurchase = {
+      ...bookData,
+      serviceStatus: "pending",
+    };
+
+    console.log(bookPurchase);
+
+    try {
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_API_URL}/bookServices`,
+        bookPurchase
+      );
+
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <dialog id="my_modal_4" className="modal">
-        <div className="modal-box w-11/12 max-w-xl">
+        <div className="modal-box w-11/12 max-w-4xl">
           <form onSubmit={handleBookService} className="card-body">
             <div className="grid grid-cols-2 gap-3">
               <div className="form-control">
@@ -35,7 +56,7 @@ const BookModal = ({ service }) => {
                 <input
                   type="text"
                   placeholder="ServiceId"
-                  value={_id}
+                  value={id}
                   className="input input-bordered w-full"
                   name="serviceId"
                   required
@@ -127,14 +148,14 @@ const BookModal = ({ service }) => {
                 ></input>
               </div>
             </div>
-         
-            <div className='form-control w-full flex flex-col gap-2 '>
-              <label className='text-gray-700'>Service Taking Date</label>
+
+            <div className="form-control w-full flex flex-col gap-2 ">
+              <label className="text-gray-700">Service Taking Date</label>
 
               <DatePicker
-                className='border p-2 w-full rounded-md'
+                className="border p-2 w-full rounded-md"
                 selected={startDate}
-                onChange={date => setStartDate(date)}
+                onChange={(date) => setStartDate(date)}
               />
             </div>
             <div className="form-control">
@@ -145,7 +166,7 @@ const BookModal = ({ service }) => {
               <textarea
                 placeholder="Special instruction"
                 name="specialInstruction"
-                className="textarea textarea-bordered w-full"
+                className="textarea textarea-bordered pb-10 w-full"
               ></textarea>
             </div>
             <div className="form-control mt-6">

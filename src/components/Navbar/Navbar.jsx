@@ -32,7 +32,7 @@ const Navbar = () => {
               {" "}
               <li className="py-2 font-bold">Manage Service</li>{" "}
             </NavLink>
-            <NavLink>
+            <NavLink to="/BookedServices">
               {" "}
               <li className="py-2 font-bold">Booked-Services</li>{" "}
             </NavLink>

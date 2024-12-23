@@ -21,7 +21,6 @@ const DetailsServices = () => {
   }, []);
   console.log(service);
   const {
-    _id,
     serviceName,
     description,
     servicePhoto,
