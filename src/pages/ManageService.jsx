@@ -3,17 +3,19 @@ import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import axios from "axios";
 import SingleManageService from "../components/SingleManageService/SingleManageService";
 import Swal from "sweetalert2";
+import useAxios from "../components/Hook/useAxios";
 
 const ManageService = () => {
   const { user } = useContext(AuthContext);
   console.log(user?.email);
+  const axiosSecure = useAxios()
 
   const [manageServices, setManageServices] = useState([]);
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const { data } = await axios.get(
-          `${import.meta.env.VITE_API_URL}/services/${user?.email}`
+        const { data } = await axiosSecure.get(
+          `/services/${user?.email}`
         );
         setManageServices(data);
       } catch (error) {
@@ -25,31 +27,38 @@ const ManageService = () => {
 
   const handleDeleteService = async (id) => {
     try {
-      const { data } = await axios.delete(
-        `${import.meta.env.VITE_API_URL}/deleteService/${id}`
-      );
+      // Show the confirmation modal using Swal
       Swal.fire({
         title: "Are you sure?",
         text: "You won't be able to revert this!",
         icon: "warning",
         showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!",
-      }).then((result) => {
+        confirmButtonColor: "#3085d6", // Color for the "Yes, delete it!" button
+        cancelButtonColor: "#d33",    // Color for the "Cancel" button
+        confirmButtonText: "Yes, delete it!", // Text for the confirm button
+      }).then(async (result) => {
         if (result.isConfirmed) {
+          // If user confirms, proceed with deletion
+          const { data } = await axios.delete(
+            `${import.meta.env.VITE_API_URL}/deleteService/${id}`
+          );
+  
+          // Remove the deleted service from the state
+          const remainingServices = manageServices.filter(
+            (service) => service._id !== id
+          );
+          setManageServices(remainingServices);
+  
+          // Show success message
           Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          console.log(data);
         }
-        const remainingServices = manageServices.filter(
-          (service) => service._id !== id
-        );
-        setManageServices(remainingServices);
       });
-      console.log(data);
     } catch (error) {
-      console.log(error);
+      console.log("Error deleting the service:", error);
     }
   };
+  
 
   console.log(manageServices);
   return (

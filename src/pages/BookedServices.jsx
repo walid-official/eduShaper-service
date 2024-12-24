@@ -2,18 +2,19 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import axios from "axios";
 import SingleBookService from "../components/SingleBookService/SingleBookService";
+import useAxios from "../components/Hook/useAxios";
 
 
 const BookedServices = () => {
   const { user } = useContext(AuthContext);
   console.log(user?.email);
-
+  const axiosSecure = useAxios()
   const [bookedServices, setBookedServices] = useState([]);
   useEffect(() => {
     const fetchBookedServices = async () => {
       try {
-        const { data } = await axios.get(
-          `${import.meta.env.VITE_API_URL}/bookServices/${user?.email}`
+        const { data } = await axiosSecure.get(
+          `/bookServices/${user?.email}`
         );
         setBookedServices(data);
       } catch (error) {

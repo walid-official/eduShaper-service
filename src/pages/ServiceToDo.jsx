@@ -2,15 +2,17 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../components/AuthProvider/AuthProvider';
 import SingleServiceToDo from '../components/SingleServiceToDo/SingleServiceToDo';
+import useAxios from '../components/Hook/useAxios';
 
 const ServiceToDo = () => {
     const {user} = useContext(AuthContext)
     const [bookedToDoServices, setBookedServices] = useState([]);
+    const axiosSecure = useAxios()
   useEffect(() => {
     const fetchBookedServices = async () => {
       try {
-        const { data } = await axios.get(
-          `${import.meta.env.VITE_API_URL}/bookToDoServices/${user?.email}`
+        const { data } = await axiosSecure.get(
+          `/bookToDoServices/${user?.email}`
         );
         setBookedServices(data);
       } catch (error) {
