@@ -11,6 +11,7 @@ import ManageService from "../../pages/ManageService";
 import UpdateServices from "../../pages/UpdateServices";
 import BookedServices from "../../pages/BookedServices";
 import ServiceToDo from "../../pages/ServiceToDo";
+import AllServices from "../../pages/AllServices";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <Login></Login>,
+      },
+      {
+        path: "allServices",
+        element: <AllServices></AllServices>,
       },
       {
         path: "add-service",
