@@ -4,8 +4,8 @@ const Question = () => {
   return (
     // className="py-10 bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-vector/abstract-floral-shape-ornament-design_9148-1926.jpg?ga=GA1.1.1662778785.1716400131&semt=ais_hybrid)`}}
     <div>
-      <div className="flex w-11/12 mx-auto pb-20 pt-10">
-        <div className="w-[50%]">
+      <div className="lg:flex w-11/12 mx-auto pb-20 pt-10">
+        <div className="lg:w-[50%]">
           <div className="py-8">
             <div className="flex py-8 gap-3 items-center">
               <div className="bg-[#8e67f1] w-10 h-1"></div>
@@ -83,7 +83,7 @@ const Question = () => {
             </div>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="lg:w-[50%]">
           <div className="flex justify-center">
             {/* <div className="">
               <img

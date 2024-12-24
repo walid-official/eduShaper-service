@@ -12,8 +12,8 @@ const SinglePopularService = ({ popularService }) => {
     price,
   } = popularService;
   return (
-    <div className="group">
-      <div className="card  shadow-xl">
+    
+      <div className="card w-full shadow-xl">
         <figure className="p-5">
           <img
             className="rounded-full w-[200px] h-[200px] object-cover border-[#8e67f1] border-b-4"
@@ -21,7 +21,7 @@ const SinglePopularService = ({ popularService }) => {
             alt="Service"
           />
         </figure>
-        <div className="card-body bg-center bg-cover border-b">
+        <div className="card-body border-b">
           <h2 className="card-title ">{serviceName}</h2>
           <p className="">{description.slice(0, 100)}...</p>
           <div className="flex justify-end py-2">
@@ -48,7 +48,6 @@ const SinglePopularService = ({ popularService }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

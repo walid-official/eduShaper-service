@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     // className="bg-center bg-cover text-white" style={{backgroundImage: `url(https://t3.ftcdn.net/jpg/04/95/12/38/360_F_495123890_u9dfRTJx2MrYXWs8Rd1eUibMAeVyXXP9.jpg)`}}
     <div className="bg-center bg-cover text-white " style={{backgroundImage: `url(https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-68131.jpg)`}}>
-      <footer className="flex w-11/12 border-b mx-auto justify-between px-10 py-20">
+      <footer className="lg:flex w-11/12 border-b mx-auto justify-between px-10 py-20">
         <div>
           <img src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png" className="w-20" alt="" />
-          <div className="pl-6">
+          <div className="pl-4">
             <h2 className="font-bold text-xl">Learn from the Best</h2>
             <p className="font-bold">
               Empowering students with top-tier education services since 2010.

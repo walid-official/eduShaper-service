@@ -10,7 +10,9 @@ const BookedServices = () => {
   console.log(user?.email);
   const axiosSecure = useAxios()
   const [bookedServices, setBookedServices] = useState([]);
+
   useEffect(() => {
+   
     const fetchBookedServices = async () => {
       try {
         const { data } = await axiosSecure.get(
@@ -19,6 +21,7 @@ const BookedServices = () => {
         setBookedServices(data);
       } catch (error) {
         console.log(error);
+     
       }
     };
     fetchBookedServices();
@@ -26,8 +29,9 @@ const BookedServices = () => {
   console.log(bookedServices);
   return (
     <div>
+
       {bookedServices.length === 0 ? (
-        <h2 className="font-bold text-4xl text-center">No Service Is Booked Yet</h2>
+        <h2 className="font-bold text-4xl flex justify-center items-center text-center">No Service Is Booked Yet</h2>
       ) : (
         bookedServices.map((bookService, index) => (
           <SingleBookService

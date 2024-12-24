@@ -26,7 +26,7 @@ const ServiceToDo = () => {
 
     return (
         <div>
-            {bookedToDoServices.length === 0 ? <h2 className='font-bold text-center text-3xl'>Nobody is Booked Your Service!!</h2> : bookedToDoServices.map((bookToDo,index) => <SingleServiceToDo key={index} bookToDo={bookToDo} ></SingleServiceToDo> )  }
+            {bookedToDoServices.length === 0 ? <h2 className='font-bold flex justify-center items-center  text-center text-3xl'>Nobody is Booked Your Service!!</h2> : bookedToDoServices.map((bookToDo,index) => <SingleServiceToDo key={index} bookToDo={bookToDo} ></SingleServiceToDo> )  }
         </div>
     );
 };

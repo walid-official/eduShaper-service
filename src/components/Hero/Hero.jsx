@@ -24,7 +24,7 @@ const Hero = () => {
           <SwiperSlide>
             <SwiperSlide>
               {" "}
-              <div className="flex">
+              <div className="lg:flex">
                 <div className="flex flex-col justify-center">
                   <h2 className="font-bold text-5xl">Homework Help Hub</h2>
                   <h2 className="font-bold text-2xl py-2">
@@ -54,12 +54,12 @@ const Hero = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="flex">
+            <div className="lg:flex">
              
               <div className="w-full">
                 <img
                   className="w-full"
-                  src="https://static.vecteezy.com/system/resources/thumbnails/008/480/504/small_2x/book-and-pencil-education-concept-illustration-for-business-idea-concept-background-free-png.png"
+                  src="https://cdn.prod.website-files.com/6364b6fd26e298b11fb9391f/6364b6fd26e298b303b93d91_3d-tb-education.png"
                   alt=""
                 />
               </div>
@@ -76,7 +76,7 @@ const Hero = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="flex">
+            <div className="lg:flex">
             <div className="flex flex-col justify-center">
                 <h2 className="font-bold text-5xl">Exam Edge Program</h2>
                 <h2 className="font-bold text-2xl py-2">Test Triumph Program</h2>

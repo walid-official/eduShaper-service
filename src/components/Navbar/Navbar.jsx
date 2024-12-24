@@ -124,10 +124,10 @@ const Navbar = () => {
             </div>
           ) : (
             <Link
-              to="/register"
+              to="/login"
               className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
             >
-              Login / Register
+              Login 
             </Link>
           )}
           {/* <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link>
