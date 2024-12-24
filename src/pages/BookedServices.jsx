@@ -10,18 +10,20 @@ const BookedServices = () => {
   console.log(user?.email);
   const axiosSecure = useAxios()
   const [bookedServices, setBookedServices] = useState([]);
+  const [bookedServicesLoader, setBookedServicesLoader] = useState(false);
 
   useEffect(() => {
-   
+    setBookedServicesLoader(true)
     const fetchBookedServices = async () => {
       try {
         const { data } = await axiosSecure.get(
           `/bookServices/${user?.email}`
         );
         setBookedServices(data);
+        setBookedServicesLoader(false)
       } catch (error) {
         console.log(error);
-     
+        setBookedServicesLoader(false)
       }
     };
     fetchBookedServices();
@@ -30,7 +32,10 @@ const BookedServices = () => {
   return (
     <div>
 
-      {bookedServices.length === 0 ? (
+      {
+        bookedServicesLoader ? <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-ring loading-lg"></span>
+      </div> :   bookedServices.length === 0 ? (
         <h2 className="font-bold text-4xl flex justify-center items-center text-center">No Service Is Booked Yet</h2>
       ) : (
         bookedServices.map((bookService, index) => (
@@ -39,7 +44,10 @@ const BookedServices = () => {
             bookService={bookService}
           ></SingleBookService>
         ))
-      )}
+      )
+      }
+
+    
     </div>
   );
 };

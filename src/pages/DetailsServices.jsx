@@ -66,7 +66,7 @@ const DetailsServices = () => {
               </div>
             </div>
             <div className="card-body bg-center bg-cover border-b">
-              <h2 className="card-title ">Personalized Education for Diverse Learners</h2>
+              <h2 className="card-title ">Full-Spectrum Educational Services</h2>
               <p className="text-sm font-bold">{description}</p>
               <div className="flex justify-center py-2">
                 <NavLink>

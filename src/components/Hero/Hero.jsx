@@ -24,7 +24,7 @@ const Hero = () => {
           <SwiperSlide>
             <SwiperSlide>
               {" "}
-              <div className="lg:flex">
+              <div className="md:flex">
                 <div className="flex flex-col justify-center">
                   <h2 className="font-bold text-5xl">Homework Help Hub</h2>
                   <h2 className="font-bold text-2xl py-2">
@@ -54,7 +54,7 @@ const Hero = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="lg:flex">
+            <div className="md:flex">
              
               <div className="w-full">
                 <img
@@ -76,7 +76,7 @@ const Hero = () => {
           </SwiperSlide>
           <SwiperSlide>
             {" "}
-            <div className="lg:flex">
+            <div className="md:flex">
             <div className="flex flex-col justify-center">
                 <h2 className="font-bold text-5xl">Exam Edge Program</h2>
                 <h2 className="font-bold text-2xl py-2">Test Triumph Program</h2>

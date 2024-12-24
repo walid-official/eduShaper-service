@@ -23,7 +23,7 @@ const PopularService = () => {
   }, []);
   console.log(popularServices);
   return (
-    <div className="w-11/12 mx-auto">
+    <div className=" w-[95%] md:w-11/12 mx-auto">
       <div className="pt-20 pb-6">
         <div className="flex py-4 gap-2 justify-center items-center">
           <div className="bg-[#8e67f1] w-8 h-1"></div>
@@ -38,7 +38,7 @@ const PopularService = () => {
           levels.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  md:gap-10 my-20 lg:w-[80%] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2  md:gap-10 my-20 w-full lg:w-[60%] mx-auto">
         {PopularServicesLoader ? (
           <div className="flex justify-center items-center h-screen">
             <span className="loading loading-ring loading-lg"></span>

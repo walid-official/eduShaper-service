@@ -3,10 +3,22 @@ import footerLogo from "../../assets/images/logo4.png";
 const Footer = () => {
   return (
     // className="bg-center bg-cover text-white" style={{backgroundImage: `url(https://t3.ftcdn.net/jpg/04/95/12/38/360_F_495123890_u9dfRTJx2MrYXWs8Rd1eUibMAeVyXXP9.jpg)`}}
-    <div className="bg-center bg-cover text-white " style={{backgroundImage: `url(https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-68131.jpg)`}}>
+    <div
+      className="bg-center bg-cover text-white "
+      style={{
+        backgroundImage: `url(https://img.freepik.com/free-photo/studio-background-concept-abstract-empty-light-gradient-purple-studio-room-background-product_1258-68131.jpg)`,
+      }}
+    >
       <footer className="lg:flex w-11/12 border-b mx-auto justify-between px-10 py-20">
         <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png" className="w-20" alt="" />
+          <div className="flex gap-2 items-center">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png"
+              className="w-20"
+              alt=""
+            />
+            <h2 className="font-bold text-xl">EduSphere</h2>
+          </div>
           <div className="pl-4">
             <h2 className="font-bold text-xl">Learn from the Best</h2>
             <p className="font-bold">

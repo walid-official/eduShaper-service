@@ -3,9 +3,10 @@ import AddServiceImg from "../assets/images/addService.png"
 import { motion } from "motion/react";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import axios from "axios";
+import useAxios from "../components/Hook/useAxios";
 const AddService = () => {
 const { user } = useContext(AuthContext);
-
+const axiosSecure = useAxios()
   const handleAddService = async (e) => {
     e.preventDefault()
     const formData = new FormData(e.target);
@@ -22,7 +23,7 @@ const { user } = useContext(AuthContext);
 
      console.log(addServiceData);
      try{
-        const {data} = await axios.post(`${import.meta.env.VITE_API_URL}/addService`, addServiceData)
+        const {data} = await axiosSecure.post(`/addService`, addServiceData)
         console.log(data);
      }catch(error){
        console.log(error);

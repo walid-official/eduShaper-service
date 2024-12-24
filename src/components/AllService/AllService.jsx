@@ -30,7 +30,7 @@ const AllService = ({singleService}) => {
             <h2 className="text-2xl font-extrabold">{serviceName}</h2>
             <h2 className="font-bold">{serviceArea}</h2>
             <p>{description.slice(0, 120)}...</p>
-            <div className="flex gap-2">
+            <div className="flex py-3 gap-2">
                 <img className='w-12 h-12 rounded-full' src={serviceProviderData?.photoURL} alt="" />
                 <h2 className="font-bold py-3">{serviceProviderData?.name}</h2>
             </div>
