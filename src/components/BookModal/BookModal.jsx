@@ -42,11 +42,11 @@ const BookModal = ({ service }) => {
         `${import.meta.env.VITE_API_URL}/bookServices`,
         bookPurchase
       );
-   Swal.fire({
-          title: "Successfully Booked Service!",
-          icon: "success",
-          draggable: true
-        });
+      Swal.fire({
+        title: "Successfully Booked Service!",
+        icon: "success",
+        draggable: true,
+      });
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -58,12 +58,17 @@ const BookModal = ({ service }) => {
     <div>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <dialog id="my_modal_4" className="modal">
-        <div className="modal-box w-11/12 max-w-4xl">
+        <div className="modal-box w-11/12 max-w-3xl bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`}}>
+          <div className="">
+            <h2 className="font-bold text-center text-3xl py-6">
+              Your Personal Book Companion
+            </h2>
+          </div>
           <form onSubmit={handleBookService} className="card-body">
             <div className="grid grid-cols-2 gap-3">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">ServiceId</span>
+                  <span className="label-text font-bold text-[#060303]">ServiceId</span>
                 </label>
                 <input
                   type="text"
@@ -76,7 +81,7 @@ const BookModal = ({ service }) => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Service Name</span>
+                  <span className="label-text font-bold">Service Name</span>
                 </label>
                 <input
                   type="text"
@@ -90,7 +95,7 @@ const BookModal = ({ service }) => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Service Image</span>
+                  <span className="label-text font-bold">Service Image</span>
                 </label>
                 <input
                   type="text"
@@ -103,7 +108,7 @@ const BookModal = ({ service }) => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Provider Email</span>
+                  <span className="label-text font-bold">Provider Email</span>
                 </label>
                 <input
                   type="text"
@@ -116,7 +121,7 @@ const BookModal = ({ service }) => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Provider Name</span>
+                  <span className="label-text font-bold">Provider Name</span>
                 </label>
                 <input
                   placeholder="Provider Name"
@@ -127,7 +132,7 @@ const BookModal = ({ service }) => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Current User Email</span>
+                  <span className="label-text font-bold">Current User Email</span>
                 </label>
                 <input
                   placeholder="Current User Email"
@@ -139,7 +144,7 @@ const BookModal = ({ service }) => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Current User Name</span>
+                  <span className="label-text font-bold">Current User Name</span>
                 </label>
                 <input
                   placeholder="Current User Name"
@@ -150,7 +155,7 @@ const BookModal = ({ service }) => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Price</span>
+                  <span className="label-text font-bold">Price</span>
                 </label>
                 <input
                   placeholder="Price"
@@ -162,7 +167,7 @@ const BookModal = ({ service }) => {
             </div>
 
             <div className="form-control w-full flex flex-col gap-2 ">
-              <label className="text-gray-700">Service Taking Date</label>
+              <label className="label-text font-bold">Service Taking Date</label>
 
               <DatePicker
                 className="border p-2 w-full rounded-md"
@@ -172,7 +177,7 @@ const BookModal = ({ service }) => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Special instruction</span>
+                <span className="label-text font-bold">Special instruction</span>
               </label>
 
               <textarea

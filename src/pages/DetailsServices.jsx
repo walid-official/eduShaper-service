@@ -2,16 +2,20 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import BookModal from "../components/BookModal/BookModal";
+import useAxios from "../components/Hook/useAxios";
 
 const DetailsServices = () => {
   const [service, setService] = useState([]);
   const { id } = useParams();
+  const axiosSecure = useAxios();
+
+
   useEffect(() => {
     document.title = "Edu-Service | Details Service"
     const fetchDetailsServices = async () => {
       try {
-        const { data } = await axios.get(
-          `${import.meta.env.VITE_API_URL}/service/${id}`
+        const { data } = await axiosSecure.get(
+          `/service/${id}`
         );
         setService(data);
       } catch (error) {

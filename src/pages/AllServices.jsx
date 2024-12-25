@@ -31,7 +31,7 @@ const AllServices = () => {
   return (
     <div>
       <div className="w-[50%] mx-auto py-7">
-        
+        <h2 className="font-bold text-center py-6 text-3xl">Explore Education Services</h2>
         <Search setAllServices={setAllServices}></Search>
       </div>
       {allServicesLoader ? (
