@@ -37,7 +37,7 @@ const SinglePopularService = ({ popularService }) => {
         <div className="flex justify-between items-center px-4 py-2">
           <div className="flex items-center">
             <img
-              className="w-10 h-10 rounded-full"
+              className="w-12 h-12 object-cover border-[#8e67f1] border rounded-full"
               src={serviceProviderData?.photoURL}
               alt="Service Provider"
             />

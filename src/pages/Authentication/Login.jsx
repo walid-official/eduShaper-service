@@ -1,20 +1,23 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import loginLottieJson from "../../assets/images/login.json";
 import Lottie from "lottie-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Login = () => {
-  const { createSignInUser } = useContext(AuthContext);
+  const { createSignInUser,regex } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+  const [showPassword, setShowPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState({});
 
-  useEffect(()=>{
-    document.title = "Edu-Service | Login"
-  },[])
-
-
+  useEffect(() => {
+    document.title = "Edu-Service | Login";
+  }, []);
 
   const handleSIgnInUser = (e) => {
     e.preventDefault();
@@ -22,15 +25,34 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
+    setErrorMessage({});
+
+    if (password.length < 6) {
+      setErrorMessage("you must commit 6 characters");
+      return;
+    }
+    if (!regex.test(password)) {
+      setErrorMessage(
+        "You Must Commit one upperCase one LowerCase and min 6 characters"
+      );
+      return;
+    }
+
+
     createSignInUser(email, password)
       .then((result) => {
         console.log(result);
+        toast.success("Successfully Logged in");
         navigate(location?.state || "/");
       })
       .catch((error) => {
         console.log(error);
+        setErrorMessage((prev) => ({ ...prev, login: error.message }));
+      toast.error("Login failed");
       });
   };
+
+
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -51,17 +73,45 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="password"
                 name="password"
                 className="input input-bordered"
                 required
               />
+              {errorMessage.login && (
+                <label className="label">
+                  <span className="label-text text-red-500">
+                    {errorMessage.login}
+                  </span>
+                </label>
+              )}
+              <div
+                onClick={() => setShowPassword(!showPassword)}
+                className=" absolute right-3 top-[52px]"
+              >
+                {showPassword ? (
+                  <i className="text-xl">
+                    <FaEyeSlash></FaEyeSlash>
+                  </i>
+                ) : (
+                  <i className="text-xl">
+                    <FaEye></FaEye>
+                  </i>
+                )}
+              </div>
+              {errorMessage.password && (
+                <label className="label">
+                  <span className="label-text text-red-500">
+                    {errorMessage.password}
+                  </span>
+                </label>
+              )}
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?

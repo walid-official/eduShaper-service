@@ -12,6 +12,8 @@ const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
   const createSignInUser = (email, password) => {
     setLoading(true)
     return signInWithEmailAndPassword(auth, email, password);
@@ -75,13 +77,13 @@ const createUser = (email, password) => {
     const eduService = {
         user,
         loading,
+        regex ,
         createUser,
         updateUserProfile,
         createSignInUser,
         userSignOut,
         signInWithGoogle
     }
-
 
     return (
         <AuthContext.Provider value={eduService}>
