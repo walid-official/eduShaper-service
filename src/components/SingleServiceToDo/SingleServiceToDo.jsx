@@ -1,4 +1,5 @@
 import axios from "axios";
+import { format } from "date-fns";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -17,6 +18,13 @@ const SingleServiceToDo = ({ bookToDo }) => {
     specialInstruction,
     Price,
   } = bookToDo || {};
+
+
+    const formattedDate = startDate
+      ? new Date(startDate).toString() !== "Invalid Date"
+        ? format(new Date(startDate), "PPP p") // Format date (e.g., Dec 24, 2024, 4:52 AM)
+        : "Invalid date"
+      : "Date not provided";
 
   const [serviceStatus, setServiceStatus] = useState(initialServiceStatus);
 
@@ -81,8 +89,8 @@ const SingleServiceToDo = ({ bookToDo }) => {
             <div className="px-4">
               <h2 className="text-xl">Name : {currentUserName}</h2>
               <h2 className="font-bold py-4">Email: {currentUserEmail}</h2>
-              {/* <h2>{format(new Date(startDate), 'P')}</h2> */}
-              <div className="">
+              <h2 className="font-bold">{formattedDate}</h2>
+              <div className="py-3">
                 <select
                   defaultValue={serviceStatus || "Booked Service Status"}
                   onChange={(e) => handleStatusChange(e, _id)}

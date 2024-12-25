@@ -2,15 +2,17 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxios from "../components/Hook/useAxios";
 
 const UpdateServices = () => {
     const { id } = useParams();
 const [updateServices, setUpdateServices] = useState([]);
+const axiosSecure = useAxios();
 useEffect(() => {
     const fetchUpdateServices = async () => {
       try {
-        const { data } = await axios.get(
-          `${import.meta.env.VITE_API_URL}/service/${id}`
+        const { data } = await axiosSecure.get(
+          `/service/${id}`
         );
         setUpdateServices(data);
       } catch (error) {

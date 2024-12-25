@@ -5,9 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Aos from "aos";
 // https://education-service-d2fdb.web.app/
 const Main = () => {
-  useEffect(()=>{
-    document.title = "Edu-Service | Home"
-  },[])
+ 
 
   useEffect(() => {
     Aos.init({
