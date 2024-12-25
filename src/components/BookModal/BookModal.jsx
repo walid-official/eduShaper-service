@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 const BookModal = ({ service }) => {
   const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
@@ -41,7 +42,11 @@ const BookModal = ({ service }) => {
         `${import.meta.env.VITE_API_URL}/bookServices`,
         bookPurchase
       );
-
+   Swal.fire({
+          title: "Successfully Booked Service!",
+          icon: "success",
+          draggable: true
+        });
       console.log(data);
     } catch (error) {
       console.log(error);

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateServices = () => {
     const { id } = useParams();
@@ -43,6 +44,11 @@ console.log(updateServices);
           updateServiceData
         );
         setUpdateServices(data);
+        Swal.fire({
+          title: "Successfully Updated!",
+          icon: "success",
+          draggable: true
+        });
       } catch (error) {
         console.log(error);
     }

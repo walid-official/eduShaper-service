@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import RegisterLottieJson from "../../assets/images/register1.json";
 import Lottie from "lottie-react";

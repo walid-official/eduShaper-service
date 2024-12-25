@@ -6,8 +6,9 @@ const Navbar = () => {
   const { user, userSignOut } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleSignOUt = () => {
-    userSignOut();
-    navigate("/login");
+    userSignOut().then(() => {
+      navigate("/login")
+    })
   };
 
   const handleThemeChange = (e) => {
@@ -81,17 +82,16 @@ const Navbar = () => {
           {/* LOGO DIV */}
           <div className="flex gap-2 items-center">
             <div className="">
-            <img
-              className="w-16"
-              src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png"
-              alt=""
-            />
+              <img
+                className="w-16"
+                src="https://cdn-icons-png.flaticon.com/512/4319/4319160.png"
+                alt=""
+              />
             </div>
             <div className="md:flex hidden">
               <h2 className="font-bold">EduSphere</h2>
             </div>
           </div>
-
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal space-x-8 font-medium">
@@ -118,43 +118,41 @@ const Navbar = () => {
                 tabIndex={0}
                 className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
               >
-                 {user ? (
-              <div className="flex gap-3 items-center">
-                <Link
-                  onClick={handleSignOUt}
-                  className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
-                >
-                  Logout
-                </Link>
                 {user ? (
-                  <div
-                    className="tooltip tooltip-bottom"
-                    data-tip={user?.displayName}
-                  >
-                    <img
-                      referrerPolicy="no-referrer"
-                      src={user?.photoURL}
-                      alt=""
-                      className="w-12 h-12 object-cover rounded-full"
-                    />
+                  <div className="flex gap-3 items-center">
+                    <Link
+                      onClick={handleSignOUt}
+                      className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                    >
+                      Logout
+                    </Link>
+                    {user ? (
+                      <div
+                        className="tooltip tooltip-bottom"
+                        data-tip={user?.displayName}
+                      >
+                        <img
+                          referrerPolicy="no-referrer"
+                          src={user?.photoURL}
+                          alt=""
+                          className="w-12 h-12 object-cover rounded-full"
+                        />
+                      </div>
+                    ) : (
+                      <div className="btn bg-[#8e67f1] flex justify-center items-center w-12 h-12 rounded-full"></div>
+                    )}
                   </div>
                 ) : (
-                  <div className="btn bg-[#8e67f1] flex justify-center items-center w-12 h-12 rounded-full"></div>
+                  <Link
+                    to="/login"
+                    className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                  >
+                    Login
+                  </Link>
                 )}
-              </div>
-            ) : (
-              <Link
-                to="/login"
-                className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
-              >
-                Login
-              </Link>
-            )}
               </ul>
             </div>
           </div>
-
-
 
           {/* Show In Large Device */}
           <div className="md:flex hidden">

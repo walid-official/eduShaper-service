@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const SingleServiceToDo = ({ bookToDo }) => {
   const {
@@ -33,8 +34,13 @@ const SingleServiceToDo = ({ bookToDo }) => {
         statusData
       );
       console.log(data);
-      if(data.modifiedCount > 0){
-        setServiceStatus(newStatus)
+      if (data.modifiedCount > 0) {
+        setServiceStatus(newStatus);
+        Swal.fire({
+          title: "Status is updated! successfully",
+          icon: "success",
+          draggable: true,
+        });
       }
     } catch (error) {
       console.log(error);

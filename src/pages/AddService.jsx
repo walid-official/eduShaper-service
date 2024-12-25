@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import axios from "axios";
 import useAxios from "../components/Hook/useAxios";
+import Swal from "sweetalert2";
 const AddService = () => {
 const { user } = useContext(AuthContext);
 const axiosSecure = useAxios()
@@ -33,6 +34,11 @@ const axiosSecure = useAxios()
      try{
         const {data} = await axiosSecure.post(`/addService`, addServiceData)
         console.log(data);
+        Swal.fire({
+          title: "Successfully Added Your Service!",
+          icon: "success",
+          draggable: true
+        });
      }catch(error){
        console.log(error);
      }

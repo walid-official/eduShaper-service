@@ -37,7 +37,7 @@ const BookedServices = () => {
         bookedServicesLoader ? <div className="flex justify-center items-center h-screen">
         <span className="loading loading-ring loading-lg"></span>
       </div> :   bookedServices.length === 0 ? (
-        <h2 className="font-bold text-4xl flex justify-center items-center text-center">No Service Is Booked Yet</h2>
+        <h2 className="font-bold text-4xl flex justify-center items-center h-screen text-center">No Service Is Booked Yet!!</h2>
       ) : (
         bookedServices.map((bookService, index) => (
           <SingleBookService

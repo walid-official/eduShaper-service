@@ -1,0 +1,78 @@
+import React from "react";
+
+const SpecialService = () => {
+  return (
+    <div className="pb-20 w-11/12 mx-auto">
+      <div className="text-center py-20">
+        <div className="flex py-4 gap-3 justify-center items-center">
+          <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
+          <h3 className="text-center font-bold text-2xl md:text-32xl">
+            Exclusive Education Services
+          </h3>
+          <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
+        </div>
+
+        <p className="md:w-[50%] mx-auto font-bold py-4">
+          Unlock personalized learning with our Exclusive Education Services,
+          designed to cater to your individual needs. From specialized tutoring
+          to tailored academic support, we provide exceptional guidance to help
+          you reach your full potential.
+        </p>
+      </div>
+      <div className="lg:flex justify-between">
+        <div className="grid lg:grid-cols-2 gap-4 lg:w-[50%]" data-aos="fade" data-aos-mirror="false"  data-aos-once="false">
+          <div className="card rounded-none bg-base-100 border-[#8e67f1] border-l-8  border shadow-2xl">
+            <div className="card-body">
+              <h2 className="card-title">Personalized Tutoring Sessions</h2>
+              <p>
+                Our Personalized Tutoring Sessions are tailored to meet your
+                unique learning needs. With one-on-one guidance, we focus on
+                strengthening your skills.
+              </p>
+            </div>
+          </div>
+          <div className="card bg-base-100 rounded-none border-[#8e67f1] border-l-8  border shadow-2xl">
+            <div className="card-body">
+              <h2 className="card-title">Mock Interview Sessions</h2>
+              <p>
+                Prepare for success with our Mock Interview Sessions. Get
+                personalized feedback, improve your interview skills, and boost
+                your confidence to ace real interviews.
+              </p>
+            </div>
+          </div>
+          <div className="card bg-base-100 rounded-none border-[#8e67f1] border-l-8  border shadow-2xl">
+            <div className="card-body">
+              <h2 className="card-title">Career Pathway Counseling</h2>
+              <p>
+                Our Career Pathway Counseling helps you explore and define your
+                professional journey. Receive expert advice on choosing the
+                right career, setting goals, and navigating your path to
+                success.
+              </p>
+            </div>
+          </div>
+          <div className="card bg-base-100 rounded-none border-[#8e67f1] border-l-8  border shadow-2xl">
+            <div className="card-body">
+              <h2 className="card-title">Online Workshop Coordination</h2>
+              <p>
+                Our Online Workshop Coordination ensures seamless planning and
+                execution of virtual learning events. We handle scheduling,
+                content organization.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="shadow-2xl border-[#8e67f1] border-l-8 border-t-8  border" data-aos="fade-up" data-aos-mirror="false"  data-aos-once="false">
+          <img
+            className="w-full"
+            src="https://img.freepik.com/premium-vector/3d-rendering-plastic_938045-8210.jpg?uid=R48960710&ga=GA1.1.1662778785.1716400131&semt=ais_hybridttps://img.freepik.com/premium-vector/learning-management-system-concept-3d-isometric-web-scene-people-studying-online-courses-platform-using-different-software-training-services-vector-illustration-isometry-graphic-design_9209-11744.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SpecialService;
