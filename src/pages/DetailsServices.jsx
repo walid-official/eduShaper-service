@@ -7,6 +7,7 @@ const DetailsServices = () => {
   const [service, setService] = useState([]);
   const { id } = useParams();
   useEffect(() => {
+    document.title = "Edu-Service | Details Service"
     const fetchDetailsServices = async () => {
       try {
         const { data } = await axios.get(
@@ -36,23 +37,23 @@ const DetailsServices = () => {
         //   backgroundImage: `url(https://img.freepik.com/premium-vector/gradient-abstract-purple-background_23-2151877370.jpg?semt=ais_hybrid)`,
         // }}
       >
-        <div className="flex items-center gap-4">
-          <div className="bg-white w-1 h-10"></div>
+        <div className="md:flex items-center gap-4">
+          <div className="bg-white md:flex hidden w-1 h-10"></div>
           <h2 className="font-bold text-3xl text-white py-4">{serviceName}</h2>
         </div>
       </div>
-      <div className="flex w-11/12 py-20 mx-auto">
-        <div className="w-[50%] flex justify-center items-center">
+      <div className="lg:flex w-11/12 py-20 mx-auto">
+        <div className="lg:w-[50%] flex justify-center items-center">
           <img
-            src="https://cdn.pixabay.com/animation/2022/08/22/15/52/15-52-12-557_512.gif"
+            src="https://cdn.pixabay.com/animation/2022/11/10/13/22/13-22-56-246_512.gif"
             alt=""
           />
         </div>
-        <div className="w-[50%]">
+        <div className="lg:w-[50%]">
             <div className="rounded-full shadow-2xl ">
 
           <div className="card  shadow-2xl">
-            <div className="flex border-b items-center">
+            <div className="md:flex border-b items-center">
               <figure className="p-5">
                 <img
                   className="rounded-full w-[200px] h-[200px] object-cover border-[#8e67f1] border-b-4"
@@ -60,7 +61,7 @@ const DetailsServices = () => {
                   alt="Service"
                 />
               </figure>
-              <div className="">
+              <div className="px-4 md:px-0">
                 <h2 className="font-extrabold text-xl">{serviceName}</h2>
                 <h2 className="font-bold py-2">{serviceArea}</h2>
               </div>

@@ -12,7 +12,7 @@ const SinglePopularService = ({ popularService }) => {
     price,
   } = popularService;
   return (
-    <div className="card shadow-2xl">
+    <div className="card rounded-md shadow-2xl" data-aos="fade-up" data-aos-mirror="false"  data-aos-once="false">
       <figure className="p-5 border-b">
         <img
           className="rounded-full w-[200px] h-[200px] object-cover border-[#8e67f1] border-b-4"

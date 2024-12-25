@@ -5,73 +5,93 @@ import ScrollTrigger from "react-scroll-trigger";
 const Count = () => {
   const [counterOn, setCounterOn] = useState(false);
   return (
-    <div className="w-11/12 mx-auto my-10">
-      <div className="flex py-8 gap-3 justify-center items-center">
-        <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
-        <h3 className="text-center font-bold text-2xl md:text-3xl">Learning Journey Highlights</h3>
-        <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
+    <div className="w-11/12 mx-auto my-10" >
+      <div className="py-10">
+        <div className="flex py-8 gap-3 justify-center items-center">
+          <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
+          <h3 className="text-center font-bold text-2xl md:text-3xl">
+            Achieved Goals - Education Services
+          </h3>
+          <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
+        </div>
+        <div className="">
+          <p className="md:w-[40%] mx-auto text-center font-bold">
+            Celebrate your achievements with our successfully completed
+            education services. Your goals are now a reality!
+          </p>
+        </div>
       </div>
-      <div className="lg:flex gap-8">
-        <div className="w-[50%]">
+      <div className="lg:flex justify-center gap-8">
+        <div className="md:w-[50%] flex items-center justify-center" data-aos="zoom-in" data-aos-mirror="false"  data-aos-once="false">
           <img
             src="https://media.istockphoto.com/id/1482901847/vector/adobe-illustrator-artwork.jpg?s=612x612&w=0&k=20&c=Z-ovrzaxDTqvAtRQ7T56NCmF9-o6wWkTVVDktH9cd-A="
             alt=""
           />
         </div>
-        <div className="">
+        <div className="flex items-center justify-center" data-aos="fade-up" data-aos-mirror="false"  data-aos-once="false">
           <ScrollTrigger
             onEnter={() => setCounterOn(true)}
             onExit={() => setCounterOn(false)}
           >
             <div className="grid md:grid-cols-2 py-20 gap-8 justify-between">
               {/* Counter 1 */}
-              <div className="text-center shadow-2xl border rounded-xl p-3 text-[#5e3598]">
-                <div className=" text-6xl font-bold w-full">
-                  {counterOn && <CountUp end={58.6} />}K
+              <div className="text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598]">
+                <div className="">
+                  <div className=" text-6xl font-bold w-full">
+                    {counterOn && <CountUp end={58.6} />}K
+                  </div>
+                  <h2 className="text-center py-3 font-bold text-xl ">
+                    Homework Excellence
+                  </h2>
+                  {/* <p className="text-center">
+                    All assignments reviewed and completed with expert feedback
+                    to ensure top-notch quality.
+                  </p> */}
                 </div>
-                <h2 className="text-center py-3 font-bold text-xl ">
-                  Student enrolled
-                </h2>
-                <p className="text-center">
-                  Successfully registered and ready to access learning
-                  materials.
-                </p>
               </div>
               {/* Counter 2 */}
-              <div className="text-center shadow-2xl border p-3 rounded-xl  text-[#5e3598]">
-                <div className=" text-6xl font-bold">
-                  {counterOn && <CountUp end={38.6} />}K
+              <div className="text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598]">
+                <div className="">
+                  <div className=" text-6xl font-bold w-full">
+                    {counterOn && <CountUp end={36} />}K
+                  </div>
+                  <h2 className="text-center py-3 font-bold text-xl ">
+                  Assignment Review
+                  </h2>
+                  {/* <p className="text-center">
+                    All assignments reviewed and completed with expert feedback
+                    to ensure top-notch quality.
+                  </p> */}
                 </div>
-                <h2 className="text-center  py-3 font-bold text-xl ">
-                  Class completed
-                </h2>
-                <p className="text-center ">
-                  Completed the session with new skills gained.
-                </p>
               </div>
               {/* Counter 3 */}
-              <div className="text-center shadow-2xl border rounded-xl p-3 text-[#5e3598]">
-                <div className=" text-6xl font-bold">
-                  {counterOn && <CountUp end={98.9} />}%
+              <div className="text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598]">
+                <div className="">
+                  <div className=" text-6xl font-bold w-full">
+                    {counterOn && <CountUp end={20} />}K
+                  </div>
+                  <h2 className="text-center py-3 font-bold text-xl ">
+                  Exam Mastery
+                  </h2>
+                  {/* <p className="text-center">
+                    All assignments reviewed and completed with expert feedback
+                    to ensure top-notch quality.
+                  </p> */}
                 </div>
-                <h2 className="text-center py-3 font-bold text-xl ">
-                  Satisfaction rate
-                </h2>
-                <p className="text-center ">
-                  Reflects student happiness and service quality.
-                </p>
               </div>
               {/* Counter 4 */}
-              <div className="text-center border shadow-2xl rounded-xl p-3 text-[#5e3598]">
+              <div className="text-center border shadow-2xl w-[200px] h-[200px] border-[#8e67f1] border-b-8 flex justify-center items-center rounded-full p-3 text-[#5e3598]">
+                <div className="">
                 <div className=" text-6xl font-bold">
-                  {counterOn && <CountUp end={236} />}K
+                  {counterOn && <CountUp end={99} />}K
                 </div>
                 <h2 className="text-center py-3 font-bold text-xl ">
-                  Top instructors
+                Tutoring Achievements
                 </h2>
-                <p className="text-center ">
+                {/* <p className="text-center ">
                   Highly rated experts with proven excellence.
-                </p>
+                </p> */}
+                </div>
               </div>
             </div>
           </ScrollTrigger>

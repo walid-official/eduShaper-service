@@ -8,18 +8,23 @@ import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Edu-Service | Register";
+  }, []);
+
   const handleRegisterForm = async (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const photoURL = form.photoURL.value
+    const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
     try {
       const userCredential = await createUser(email, password);
       await updateUserProfile({
         displayName: name,
-        photoURL: photoURL
+        photoURL: photoURL,
       });
       console.log("User Registered", userCredential);
       navigate("/");

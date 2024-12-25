@@ -9,6 +9,7 @@ const ServiceToDo = () => {
     const [bookedToDoServices, setBookedServices] = useState([]);
     const axiosSecure = useAxios()
   useEffect(() => {
+    document.title = "Edu-Service | Service-To-Do"
     const fetchBookedServices = async () => {
       try {
         const { data } = await axiosSecure.get(

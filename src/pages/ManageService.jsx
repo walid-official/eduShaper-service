@@ -13,6 +13,7 @@ const ManageService = () => {
   const [manageServices, setManageServices] = useState([]);
   const [manageServicesLoader, setManageServicesLoader] = useState(false);
   useEffect(() => {
+    document.title = "Edu-Service | Manage Service"
     setManageServicesLoader(true);
     const fetchServices = async () => {
       try {

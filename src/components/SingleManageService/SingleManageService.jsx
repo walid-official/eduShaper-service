@@ -14,7 +14,7 @@ const SingleManageService = ({ manageService, handleDeleteService }) => {
   } = manageService || {};
 
   return (
-    <div className="w-[70%] mx-auto my-10">
+    <div className="md:w-[70%] w-[90%] mx-auto my-10">
       <div className="">
         <div className="grid md:grid-cols-2 p-4 bg-base-100 shadow-xl">
           <figure className="flex justify-center items-center">

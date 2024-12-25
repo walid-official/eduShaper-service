@@ -13,6 +13,7 @@ const BookedServices = () => {
   const [bookedServicesLoader, setBookedServicesLoader] = useState(false);
 
   useEffect(() => {
+    document.title = "Edu-Service | Booked Service"
     setBookedServicesLoader(true)
     const fetchBookedServices = async () => {
       try {

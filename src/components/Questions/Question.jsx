@@ -5,7 +5,7 @@ const Question = () => {
     // className="py-10 bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-vector/abstract-floral-shape-ornament-design_9148-1926.jpg?ga=GA1.1.1662778785.1716400131&semt=ais_hybrid)`}}
     <div>
       <div className="lg:flex w-11/12 mx-auto pb-20 pt-10">
-        <div className="lg:w-[50%]">
+        <div className="lg:w-[50%]" data-aos="fade-down" data-aos-mirror="false"  data-aos-once="false">
           <div className="py-8">
             <div className="flex py-8 gap-3 items-center">
               <div className="bg-[#8e67f1] w-10 h-1"></div>
@@ -91,7 +91,7 @@ const Question = () => {
                 alt=""
               />
             </div> */}
-            <div className="">
+            <div className="" data-aos="fade-down" data-aos-mirror="false"  data-aos-once="false">
               <img
                 src="https://img.freepik.com/free-photo/rag-doll-with-giant-magnifying-glass-blue-question-symbol_1156-264.jpg?ga=GA1.1.1662778785.1716400131&semt=ais_hybrid"
                 alt=""

@@ -9,6 +9,7 @@ const AllServices = () => {
 
 
   useEffect(() => {
+    document.title = "Edu-Service | All Services"
     setAllServicesLoader(true);
     const fetchAllServices = async () => {
       try {

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import loginLottieJson from "../../assets/images/login.json";
 import Lottie from "lottie-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -9,6 +9,13 @@ const Login = () => {
   const { createSignInUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(()=>{
+    document.title = "Edu-Service | Login"
+  },[])
+
+
+
   const handleSIgnInUser = (e) => {
     e.preventDefault();
     const form = e.target;

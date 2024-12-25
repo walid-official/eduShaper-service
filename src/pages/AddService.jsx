@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import AddServiceImg from "../assets/images/addService.png"
 import { motion } from "motion/react";
 import { AuthContext } from "../components/AuthProvider/AuthProvider";
@@ -7,6 +7,14 @@ import useAxios from "../components/Hook/useAxios";
 const AddService = () => {
 const { user } = useContext(AuthContext);
 const axiosSecure = useAxios()
+
+
+  useEffect(()=>{
+    document.title = "Edu-Service | Add Service"
+  },[])
+
+
+
   const handleAddService = async (e) => {
     e.preventDefault()
     const formData = new FormData(e.target);
@@ -49,7 +57,7 @@ const axiosSecure = useAxios()
           </div>
           <div  className="card bg-base-100  max-w-lg shrink-0 shadow-2xl">
             <form onSubmit={handleAddService} className="card-body">
-              <div className="flex gap-3 justify-between">
+              <div className="md:flex gap-3 justify-between">
                 <div className="form-control">  
                   <label className="label">
                     <span className="label-text">Service Name</span>
