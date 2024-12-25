@@ -54,9 +54,9 @@ const DetailsServices = () => {
           />
         </div>
         <div className="lg:w-[50%]">
-            <div className="rounded-full shadow-2xl ">
+            <div className="rounded-full shadow-2xl " style={{backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`}}>
 
-          <div className="card  shadow-2xl">
+          <div className="card  shadow-2xl bg-center bg-cover " >
             <div className="md:flex border-b items-center">
               <figure className="p-5">
                 <img

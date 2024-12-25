@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import DatePicker from "react-datepicker";
-
+import { IoClose } from "react-icons/io5";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -50,15 +50,20 @@ const BookModal = ({ service }) => {
       console.log(data);
     } catch (error) {
       console.log(error);
-      toast.error(error.message);
+      toast.error("You Already Have Purchased This Service!");
     }
   };
 
   return (
-    <div>
+    <div className="">
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       <dialog id="my_modal_4" className="modal">
-        <div className="modal-box w-11/12 max-w-3xl bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`}}>
+        <div
+          className="modal-box w-11/12 max-w-3xl bg-center bg-cover"
+          style={{
+            backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`,
+          }}
+        >
           <div className="">
             <h2 className="font-bold text-center text-3xl py-6">
               Your Personal Book Companion
@@ -68,7 +73,9 @@ const BookModal = ({ service }) => {
             <div className="grid grid-cols-2 gap-3">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-bold text-[#060303]">ServiceId</span>
+                  <span className="label-text font-bold text-[#060303]">
+                    ServiceId
+                  </span>
                 </label>
                 <input
                   type="text"
@@ -132,7 +139,9 @@ const BookModal = ({ service }) => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-bold">Current User Email</span>
+                  <span className="label-text font-bold">
+                    Current User Email
+                  </span>
                 </label>
                 <input
                   placeholder="Current User Email"
@@ -144,7 +153,9 @@ const BookModal = ({ service }) => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text font-bold">Current User Name</span>
+                  <span className="label-text font-bold">
+                    Current User Name
+                  </span>
                 </label>
                 <input
                   placeholder="Current User Name"
@@ -167,7 +178,9 @@ const BookModal = ({ service }) => {
             </div>
 
             <div className="form-control w-full flex flex-col gap-2 ">
-              <label className="label-text font-bold">Service Taking Date</label>
+              <label className="label-text font-bold">
+                Service Taking Date
+              </label>
 
               <DatePicker
                 className="border p-2 w-full rounded-md"
@@ -177,7 +190,9 @@ const BookModal = ({ service }) => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text font-bold">Special instruction</span>
+                <span className="label-text font-bold">
+                  Special instruction
+                </span>
               </label>
 
               <textarea
@@ -194,7 +209,14 @@ const BookModal = ({ service }) => {
                 Purchase Service
               </button>
             </div>
-            {/* <label className="modal-backdrop" htmlFor="my_modal_7">Close</label> */}
+           <div className="">
+           <div className="modal-action ">
+              <form method="dialog">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="btn absolute top-6 left-6 text-2xl font-bold"><IoClose></IoClose></button>
+              </form>
+            </div>
+           </div>
           </form>
         </div>
       </dialog>
