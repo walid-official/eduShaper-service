@@ -9,9 +9,9 @@ const ManageService = () => {
   const { user } = useContext(AuthContext);
   console.log(user?.email);
   const axiosSecure = useAxios();
-
   const [manageServices, setManageServices] = useState([]);
   const [manageServicesLoader, setManageServicesLoader] = useState(false);
+  
   useEffect(() => {
     document.title = "Edu-Service | Manage Service"
     setManageServicesLoader(true);

@@ -64,9 +64,9 @@ const Hero = () => {
               </div>
               <div className="flex flex-col justify-center">
                 <div className="">
-                  <h2 className="font-bold text-5xl">Knowledge Boost Hub</h2>
-                  <h2 className="font-bold text-2xl py-2">LearnPro Academy</h2>
-                  <p className="md:w-[80%] text-sm py-3">
+                  <h2 className="font-bold  text-5xl">Knowledge Boost Hub</h2>
+                  <h2 className="font-bold  text-2xl py-2">LearnPro Academy</h2>
+                  <p className="md:w-[80%]  text-sm py-3">
                     Empowering students to enhance their understanding of
                     challenging concepts, tackle assignments with confidence,
                     and excel academically through expert guidance and

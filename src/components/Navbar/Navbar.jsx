@@ -91,7 +91,7 @@ const Navbar = () => {
               />
             </div>
             <div className="md:flex hidden">
-              <h2 className="font-bold">EduSphere</h2>
+              <h2 className="font-bold text-xl">EduSphere</h2>
             </div>
           </NavLink>
         </div>
@@ -204,7 +204,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/login"
-                className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white"
               >
                 Login
               </Link>
