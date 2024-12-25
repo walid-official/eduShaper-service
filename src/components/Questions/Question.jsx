@@ -25,7 +25,7 @@ const Question = () => {
                 Learn at Your Own Pac
               </div>
               <div className="collapse-content">
-                <p>
+                <p >
                   Learn at Your Own Pace is a flexible, personalized education
                   service designed to suit your unique learning style and
                   schedule. Whether you're a fast learner or need extra time to
@@ -40,7 +40,7 @@ const Question = () => {
                 Learn from the best professionals
               </div>
               <div className="collapse-content">
-                <p>
+                <p >
                   Learn from the Best Professionals is a premium education
                   service that connects you with industry-leading experts and
                   seasoned professionals. Gain insights, skills, and knowledge

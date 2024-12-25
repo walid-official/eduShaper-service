@@ -54,9 +54,9 @@ const DetailsServices = () => {
           />
         </div>
         <div className="lg:w-[50%]">
-            <div className="rounded-full shadow-2xl " style={{backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`}}>
+            <div className="rounded-full shadow-2xl " >
 
-          <div className="card  shadow-2xl bg-center bg-cover " >
+          <div className="card  shadow-2xl bg-center bg-cover " style={{backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`}}>
             <div className="md:flex border-b items-center">
               <figure className="p-5">
                 <img
@@ -85,7 +85,7 @@ const DetailsServices = () => {
               <div className="flex justify-between items-center px-4 py-2">
                 <div className="flex items-center">
                   <img
-                    className="w-10 h-10 rounded-full"
+                    className="w-10 h-10 object-cover rounded-full"
                     src={serviceProviderData?.photoURL}
                     alt="Service Provider"
                   />
