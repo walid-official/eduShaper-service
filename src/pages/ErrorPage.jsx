@@ -13,7 +13,7 @@ const ErrorPage = () => {
         </div>
         <div className="text-center">
           <NavLink to="/">
-            <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white w-[50%] mx-auto">
+            <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white w-[50%] mx-auto">
               GO Back
             </button>
           </NavLink>

@@ -127,7 +127,7 @@ console.log(updateServices);
             ></textarea>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
+            <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white">
               Update Service
             </button>
           </div>

@@ -56,7 +56,7 @@ const PopularService = () => {
       </div>
       <div className="flex justify-center items-center ">
         <NavLink className="" to="/allServices">
-          <button className="btn hover:translate-x-4 duration-700 flex gap-2 bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">All Services <button><FaLongArrowAltRight></FaLongArrowAltRight></button></button>
+          <button className="btn hover:translate-x-4 duration-700 flex gap-2 bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white">All Services <button><FaLongArrowAltRight></FaLongArrowAltRight></button></button>
           
         </NavLink>
         

@@ -43,10 +43,10 @@ const SingleBookService = ({ bookService }) => {
                 <h2 className="text-sm font-bold py-4">{specialInstruction}</h2>
               </div>
               <div className="flex gap-4  items-center">
-                <h2 className="btn shadow-2xl bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white badge">
+                <h2 className="btn shadow-2xl bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white badge">
                   {Price}$
                 </h2>
-                <h2 className="btn shadow-2xl bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white badge ">
+                <h2 className="btn shadow-2xl bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white badge ">
                   {serviceStatus}
                 </h2>
               </div>

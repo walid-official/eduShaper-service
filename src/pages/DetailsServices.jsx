@@ -36,7 +36,7 @@ const DetailsServices = () => {
   return (
     <div className="">
       <div
-        className="bg-cover bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] px-20 py-16 bg-center"
+        className="bg-cover bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] px-20 py-16 bg-center"
         // style={{
         //   backgroundImage: `url(https://img.freepik.com/premium-vector/gradient-abstract-purple-background_23-2151877370.jpg?semt=ais_hybrid)`,
         // }}
@@ -75,7 +75,7 @@ const DetailsServices = () => {
               <p className="text-sm font-bold">{description}</p>
               <div className="flex justify-center py-2">
                 <NavLink>
-                  <button  onClick={() => document.getElementById("my_modal_4").showModal()} className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
+                  <button  onClick={() => document.getElementById("my_modal_4").showModal()} className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white">
                     Book Now
                   </button>
                 </NavLink>
