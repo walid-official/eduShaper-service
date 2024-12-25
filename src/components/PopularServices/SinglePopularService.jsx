@@ -27,7 +27,7 @@ const SinglePopularService = ({ popularService }) => {
         </div>
         <div className="flex justify-end py-2">
           <NavLink to={`/DetailService/${_id}`}>
-            <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+            <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
               View Details
             </button>
           </NavLink>

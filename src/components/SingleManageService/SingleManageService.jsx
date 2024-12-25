@@ -31,12 +31,12 @@ const SingleManageService = ({ manageService, handleDeleteService }) => {
             <div className="card-actions justify-start">
               <button
                 onClick={() => handleDeleteService(_id)}
-                className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white"
               >
                 Delete
               </button>
               <Link to={`/updateService/${_id}`}>
-                <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+                <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
                   Update
                 </button>
               </Link>

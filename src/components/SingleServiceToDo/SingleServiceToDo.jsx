@@ -74,11 +74,11 @@ const SingleServiceToDo = ({ bookToDo }) => {
                 <h2 className="text-sm font-bold py-4">{specialInstruction}</h2>
               </div>
               <div className="flex gap-4  items-center">
-                <div className="badge shadow-2xl bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+                <div className="badge shadow-2xl bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
                   {Price}$
                 </div>
                 {serviceStatus && (
-                  <div className="badge shadow-2xl bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+                  <div className="badge shadow-2xl bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
                     {serviceStatus}
                   </div>
                 )}

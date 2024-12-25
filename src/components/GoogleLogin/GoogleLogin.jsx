@@ -18,7 +18,7 @@ const GoogleLogin = () => {
         <div>
              <div className="divider">OR</div>
              <div className="">
-                <button type='button' onClick={handleGoogleSignIn} className='btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] w-full text-white'>Continue With Google</button>
+                <button type='button' onClick={handleGoogleSignIn} className='btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] w-full text-white'>Continue With Google</button>
              </div>
         </div>
     );

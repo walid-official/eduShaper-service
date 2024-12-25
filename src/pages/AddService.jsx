@@ -125,7 +125,7 @@ const axiosSecure = useAxios()
                 ></textarea>
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">
+                <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">
                   Add Service
                 </button>
               </div>

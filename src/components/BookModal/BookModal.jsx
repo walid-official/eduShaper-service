@@ -204,7 +204,7 @@ const BookModal = ({ service }) => {
             <div className="form-control mt-6">
               <button
                 onClick={() => document.getElementById("my_modal_4").close()}
-                className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white"
               >
                 Purchase Service
               </button>

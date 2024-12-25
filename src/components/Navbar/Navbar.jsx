@@ -143,7 +143,7 @@ const Navbar = () => {
                   <div className="flex gap-3 items-center">
                     <Link
                       onClick={handleSignOUt}
-                      className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                      className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white"
                     >
                       Logout
                     </Link>
@@ -166,7 +166,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                    className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white"
                   >
                     Login
                   </Link>
@@ -181,7 +181,7 @@ const Navbar = () => {
               <div className="flex gap-3 items-center">
                 <Link
                   onClick={handleSignOUt}
-                  className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white"
+                  className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white"
                 >
                   Logout
                 </Link>
@@ -211,8 +211,8 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link>
-           <Link to="/register" className="btn bg-gradient-to-r from-[#8e67f1] to-[#8e67f1ae] text-white">Login / Register</Link> */}
+          {/* <Link to="/register" className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">Login / Register</Link>
+           <Link to="/register" className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1ae] text-white">Login / Register</Link> */}
         </div>
       </div>
     </div>
