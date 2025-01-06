@@ -37,12 +37,7 @@ const Hero = () => {
                     understanding scientific concepts.
                   </p>
                 </div>
-                <div className="w-full">
-                  {/* <img
-                    className="w-full"
-                    src="https://png.pngtree.com/png-clipart/20240306/original/pngtree-3d-rendering-education-learning-cartoon-elements-png-image_14527152.png"
-                    alt=""
-                  /> */}
+                <div className="w-full flex justify-end">
                   <img
                     className="w-full"
                     src="https://pixcap.com/cdn/library/template/1723654624011/thumbnail/Two_Employees_Are_Working_Together_In_Front_Of_The_Desk_3D_Illustration_transparent_800_emp.webp"
@@ -91,7 +86,7 @@ const Hero = () => {
                   effective study methods, time management skills.
                 </p>
               </div>
-              <div className="w-full">
+              <div className="w-full flex justify-end">
                 <img
                   className="w-full"
                   src="https://pixcap.com/cdn/library/template/1723748503236/thumbnail/Passion_In_Learning_3D_Illustration_transparent_emp_800.webp"

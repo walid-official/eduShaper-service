@@ -9,7 +9,7 @@ const Count = () => {
       <div className="py-10">
         <div className="flex py-8 gap-3 justify-center items-center">
           <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
-          <h3 className="text-center font-bold text-2xl md:text-3xl">
+          <h3 className="text-center font-bold text-2xl md:text-4xl">
             Achieved Goals - Education Services
           </h3>
           <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
@@ -21,8 +21,8 @@ const Count = () => {
           </p>
         </div>
       </div>
-      <div className="lg:flex justify-center gap-8">
-        <div className="md:w-[50%] flex items-center justify-center" data-aos="zoom-in" data-aos-mirror="false"  data-aos-once="false">
+      <div className="lg:flex justify-evenly gap-8">
+        <div className="flex items-center justify-center" data-aos="zoom-in" data-aos-mirror="false"  data-aos-once="false">
           <img
             src="https://media.istockphoto.com/id/1482901847/vector/adobe-illustrator-artwork.jpg?s=612x612&w=0&k=20&c=Z-ovrzaxDTqvAtRQ7T56NCmF9-o6wWkTVVDktH9cd-A="
             alt=""

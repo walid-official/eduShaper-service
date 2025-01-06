@@ -26,13 +26,13 @@ const PopularService = () => {
   console.log(popularServices);
   return (
     <div className=" w-[95%] md:w-11/12 mx-auto">
-      <div className="pt-20 pb-6">
+      <div className="pt-2 pb-6">
         <div className="flex py-4 gap-2 justify-center items-center">
-          <div className="bg-[#8e67f1] w-8 h-1"></div>
-          <h3 className="text-center font-bold text-2xl md:text-3xl">
+          <div className="bg-[#8e67f1] w-16 h-1"></div>
+          <h3 className="text-center font-bold text-2xl md:text-4xl">
             Popular Services
           </h3>
-          <div className="bg-[#8e67f1] w-8 h-1"></div>
+          <div className="bg-[#8e67f1] w-16 h-1"></div>
         </div>
         <p className="md:w-[40%] mx-auto text-center font-bold">
           Our top-rated educational services include tutoring, exam preparation,
@@ -40,7 +40,7 @@ const PopularService = () => {
           levels.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2  md:gap-10 my-20 w-full lg:w-[60%] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 md:gap-10 my-20">
         {PopularServicesLoader ? (
           <div className="flex justify-center items-center h-screen">
             <span className="loading loading-ring loading-lg"></span>

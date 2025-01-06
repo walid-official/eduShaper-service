@@ -69,7 +69,7 @@ const ManageService = () => {
         <div className="flex justify-center items-center h-screen">
           <span className="loading loading-ring loading-lg"></span>
         </div>
-      ) : (
+      ) : manageServices.length === 0 ? <h2 className="font-bold text-4xl flex justify-center items-center h-screen text-center">No Service Is Added</h2> : (
         manageServices.map((manageService, index) => (
           <SingleManageService
             key={index}
@@ -77,7 +77,7 @@ const ManageService = () => {
             manageService={manageService}
           ></SingleManageService>
         ))
-      )}
+      ) }
     </div>
   );
 };

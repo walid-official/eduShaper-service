@@ -37,9 +37,6 @@ const DetailsServices = () => {
     <div className="">
       <div
         className="bg-cover bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] px-20 py-16 bg-center"
-        // style={{
-        //   backgroundImage: `url(https://img.freepik.com/premium-vector/gradient-abstract-purple-background_23-2151877370.jpg?semt=ais_hybrid)`,
-        // }}
       >
         <div className="md:flex items-center gap-4">
           <div className="bg-white md:flex hidden w-1 h-10"></div>
@@ -54,9 +51,9 @@ const DetailsServices = () => {
           />
         </div>
         <div className="lg:w-[50%]">
-            <div className="rounded-full shadow-2xl " >
+            <div className="shadow-2xl " >
 
-          <div className="card  shadow-2xl bg-center bg-cover " style={{backgroundImage: `url(https://img.freepik.com/premium-photo/abstract-paper-cut-shape-wave-background_474888-4825.jpg)`}}>
+          <div className="card  shadow-2xl bg-center bg-cover">
             <div className="md:flex border-b items-center">
               <figure className="p-5">
                 <img
