@@ -30,7 +30,7 @@ const AllServices = () => {
 
   return (
     <div>
-      <div className="w-[40%] mx-auto py-7">
+      <div className="md:w-[40%] w-[90%] mx-auto py-7">
         <h2 className="font-bold text-center py-6 text-3xl">Explore Education Services</h2>
         <Search setAllServices={setAllServices}></Search>
       </div>

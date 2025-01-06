@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import BookModal from "../components/BookModal/BookModal";
 import useAxios from "../components/Hook/useAxios";
+import DetailsImg from "../assets/images/world2.gif"
 
 const DetailsServices = () => {
   const [service, setService] = useState([]);
@@ -46,7 +47,7 @@ const DetailsServices = () => {
       <div className="lg:flex w-11/12 py-20 mx-auto">
         <div className="lg:w-[50%] flex justify-center items-center">
           <img
-            src="https://cdn.pixabay.com/animation/2022/11/10/13/22/13-22-56-246_512.gif"
+            src={DetailsImg}
             alt=""
           />
         </div>

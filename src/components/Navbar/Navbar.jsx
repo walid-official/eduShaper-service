@@ -26,6 +26,7 @@ const Navbar = () => {
         {" "}
         <li className="pt-2 font-bold">Services</li>{" "}
       </NavLink>
+      
       {user && (
         <li>
           <details>
@@ -50,7 +51,16 @@ const Navbar = () => {
             </ul>
           </details>
         </li>
+        
       )}
+      <NavLink to="/about">
+        {" "}
+        <li className="pt-2 font-bold">About</li>{" "}
+      </NavLink>
+      <NavLink to="/contact">
+        {" "}
+        <li className="pt-2 font-bold">Contact</li>{" "}
+      </NavLink>
     </>
   );
   return (

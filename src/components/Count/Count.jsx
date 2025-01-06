@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
-
+import counterImg from "../../assets/images/counter.png"
 const Count = () => {
   const [counterOn, setCounterOn] = useState(false);
   return (
-    <div className="w-11/12 mx-auto my-10" >
+    <div className="w-11/12 mx-auto pt-10 pb-5" >
       <div className="py-10">
         <div className="flex py-8 gap-3 justify-center items-center">
           <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
@@ -24,7 +24,7 @@ const Count = () => {
       <div className="lg:flex justify-evenly gap-8">
         <div className="flex items-center justify-center" data-aos="zoom-in" data-aos-mirror="false"  data-aos-once="false">
           <img
-            src="https://media.istockphoto.com/id/1482901847/vector/adobe-illustrator-artwork.jpg?s=612x612&w=0&k=20&c=Z-ovrzaxDTqvAtRQ7T56NCmF9-o6wWkTVVDktH9cd-A="
+            src={counterImg}
             alt=""
           />
         </div>

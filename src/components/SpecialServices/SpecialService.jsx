@@ -1,5 +1,5 @@
 import React from "react";
-
+import professor from "../../assets/images/professor.png"
 const SpecialService = () => {
   return (
     <div className="pb-20 w-11/12 mx-auto">
@@ -25,7 +25,7 @@ const SpecialService = () => {
             <div className="card-body flex justify-center items-center">
              <div className="">
              <h2 className="card-title">Personalized Tutoring Sessions</h2>
-              <p>
+              <p className="py-2">
                 Our Personalized Tutoring Sessions are tailored to meet your
                 unique learning needs. With one-on-one guidance, we focus on
                 strengthening your skills.
@@ -37,7 +37,7 @@ const SpecialService = () => {
             <div className="card-body flex justify-center items-center">
              <div className="">
              <h2 className="card-title">Mock Interview Sessions</h2>
-              <p>
+              <p className="py-2">
                 Prepare for success with our Mock Interview Sessions. Get
                 personalized feedback, improve your interview skills, and boost
                 your confidence to ace real interviews.
@@ -49,7 +49,7 @@ const SpecialService = () => {
             <div className="card-body flex justify-center items-center">
               <div className="">
               <h2 className="card-title">Career Pathway Counseling</h2>
-              <p>
+              <p className="py-2">
                 Our Career Pathway Counseling helps you explore and define your
                 professional journey. Receive expert advice on choosing the
                 right career, setting goals, and navigating your path to
@@ -63,7 +63,7 @@ const SpecialService = () => {
             <div className="card-body flex justify-center items-center">
              <div className="">
              <h2 className="card-title">Online Workshop Coordination</h2>
-              <p>
+              <p className="py-2">
                 Our Online Workshop Coordination ensures seamless planning and
                 execution of virtual learning events. We handle scheduling,
                 content organization.
@@ -74,8 +74,8 @@ const SpecialService = () => {
         </div>
         <div className="shadow-2xl pt-6 lg:pt-0 flex items-center justify-center border" data-aos="fade-up" data-aos-mirror="false"  data-aos-once="false">
           <img
-            className=" w-full object-cover"
-            src="https://img.freepik.com/premium-vector/3d-rendering-plastic_938045-8210.jpg?uid=R48960710&ga=GA1.1.1662778785.1716400131&semt=ais_hybridttps://img.freepik.com/premium-vector/learning-management-system-concept-3d-isometric-web-scene-people-studying-online-courses-platform-using-different-software-training-services-vector-illustration-isometry-graphic-design_9209-11744.jpg"
+            className="w-full object-cover"
+            src={professor}
             alt=""
           />
         </div>

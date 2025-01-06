@@ -93,7 +93,7 @@ const Question = () => {
             </div> */}
             <div className="" data-aos="fade-down" data-aos-mirror="false"  data-aos-once="false">
               <img
-                src="https://img.freepik.com/free-photo/rag-doll-with-giant-magnifying-glass-blue-question-symbol_1156-264.jpg?ga=GA1.1.1662778785.1716400131&semt=ais_hybrid"
+                src={QuestionImg}
                 alt=""
               />
             </div>
