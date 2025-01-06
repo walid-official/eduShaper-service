@@ -17,14 +17,14 @@ const About = () => {
 
       <div className="pt-10 w-11/12 mx-auto">
         <div className="">
-          <h2 className="font-bold text-center text-2xl">
+          <h2 className="font-bold md:w-[35%] mx-auto text-center text-xl">
             Empower Minds, Inspire Futures: Your Journey to Lifelong Learning
           </h2>
-          <p className="md:w-[45%] mx-auto font-semibold text-center py-4">
+          {/* <p className="md:w-[45%] mx-auto font-semibold text-center py-4">
             Empowering learners to discover their potential, thrive with
             knowledge, and live a purpose-driven life, fostering lifelong
             success and meaningful impact.
-          </p>
+          </p> */}
         </div>
         <div className="lg:w-[65%] mx-auto">
           <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-3 py-20">
