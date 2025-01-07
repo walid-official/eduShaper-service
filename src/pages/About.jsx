@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 const About = () => {
   return (
     <div>
-      <div className="bg-[#f2f2f2] py-10">
+      <div className="bg-gradient-to-r from-[#774ede] to-[#8e67f1cb]  text-white py-10">
         <h2 className="font-bold text-center text-4xl">About Us</h2>
 
         <div className="flex justify-center py-3 gap-2 ">
@@ -42,7 +42,7 @@ const About = () => {
               </div>
             </div>
             {/* Counter 2 */}
-            <div className="text-center shadow-lg hover:shadow-2xl w-[200px] mx-auto h-[200px] flex justify-center items-center border-[#8e67f1] hover:border-b-8 duration-300  border  p-3 ">
+            <div className="text-center shadow-lg hover:shadow-2xl w-[200px] mx-auto h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8 duration-300  border  p-3 ">
               <div className="">
                 <div className=" text-6xl font-bold w-full">36K</div>
                 <h2 className="text-center py-3 font-bold text-xl ">
@@ -55,7 +55,7 @@ const About = () => {
               </div>
             </div>
             {/* Counter 3 */}
-            <div className="text-center shadow-lg hover:shadow-2xl w-[200px] mx-auto h-[200px] flex justify-center items-center border-[#8e67f1] hover:border-b-8 duration-300  border  p-3 ">
+            <div className="text-center shadow-lg hover:shadow-2xl w-[200px] mx-auto h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8 duration-300  border  p-3 ">
               <div className="">
                 <div className=" text-6xl font-bold w-full">20K</div>
                 <h2 className="text-center py-3 font-bold text-xl ">
@@ -94,7 +94,7 @@ const About = () => {
       </div>
       <div className="w-11/12 mx-auto">
         <div className="">
-          <div className="">
+          <div className="pt-8">
             <h2 className="font-bold text-center text-3xl">
               What Make Us Spcecial?
             </h2>

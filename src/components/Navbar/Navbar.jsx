@@ -40,7 +40,7 @@ const Navbar = () => {
         <li>
           <details>
             <summary className="font-bold">DashBoard</summary>
-            <ul className="px-8 w-full md:w-72 z-10">
+            <ul className=" w-full md:w-72 z-10">
               <NavLink to="/add-service">
                 {" "}
                 <li className="py-2 font-bold">Add Service</li>{" "}
@@ -65,7 +65,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className=" ">
+    <div className="sticky top-0 backdrop-blur-xl bg-white/30 z-10">
       <div className="navbar py-6 border-b w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">

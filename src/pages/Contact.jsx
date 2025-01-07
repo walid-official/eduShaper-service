@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <div>
-      <div className="bg-[#f2f2f2] py-12">
+      <div className="bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white py-12">
         <h2 className="font-bold text-center text-4xl">Contact Us</h2>
 
         <div className="flex justify-center py-3 gap-2 ">
