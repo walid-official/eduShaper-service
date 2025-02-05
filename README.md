@@ -7,7 +7,7 @@ EduSphere Service is an innovative platform designed to connect users with diver
 
 ##
 
-<img src="https://raw.githubusercontent.com/walid-official/eduShaper-service/main/Screenshot-2025-01-04-192322.png" alt="EduShaper Screenshot" width="600">
+<img src="https://raw.githubusercontent.com/walid-official/eduShaper-service/main/Screenshot-2025-01-04-192322.png" alt="EduShaper Screenshot" width="600" height="450">
 
 ## 🔗 client Site URL
 
