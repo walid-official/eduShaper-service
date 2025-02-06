@@ -1,6 +1,6 @@
 Here’s the **well-formatted** README section with **dependencies**, ready to copy and paste into your `README.md` file:  
 
-```markdown
+
 # 🎓 EduSphere Service  
 
 EduSphere Service is an innovative platform designed to connect users with diverse educational services. From sharing and booking tutoring sessions to managing educational resources, **EduSphere Service** empowers both learners and providers with an **easy-to-use, efficient, and secure web application** tailored to meet modern educational needs.  
