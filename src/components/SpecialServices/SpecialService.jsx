@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import professor from "../../assets/images/professor.png"
+import { ThemeContext } from "../../context/ThemeContext";
 const SpecialService = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div className="pb-20 w-11/12 mx-auto">
       <div className="text-center py-20">
@@ -12,7 +14,7 @@ const SpecialService = () => {
           <div className="bg-[#8e67f1] w-10 md:w-20 h-1"></div>
         </div>
 
-        <p className="md:w-[50%] mx-auto font-bold py-4">
+        <p className={`md:w-[50%] mx-auto font-bold py-4 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
           Unlock personalized learning with our Exclusive Education Services,
           designed to cater to your individual needs. From specialized tutoring
           to tailored academic support, we provide exceptional guidance to help
@@ -21,7 +23,7 @@ const SpecialService = () => {
       </div>
       <div className="lg:flex justify-between">
         <div className="grid lg:grid-cols-2 gap-4 lg:w-[50%]" data-aos="fade" data-aos-mirror="false"  data-aos-once="false">
-          <div className="card bg-base-100 border-[#8e67f1] border-l-8 border-r-8  border shadow-2xl">
+          <div className={`card bg-base-100 border-[#8e67f1] border-l-8 border-r-8  border shadow-2xl ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className="card-body flex justify-center items-center">
              <div className="">
              <h2 className="card-title">Personalized Tutoring Sessions</h2>
@@ -33,7 +35,7 @@ const SpecialService = () => {
              </div>
             </div>
           </div>
-          <div className="card bg-base-100  border-l-8  border-r-8 border-[#8e67f1] border shadow-2xl">
+          <div className={`card bg-base-100 border-[#8e67f1] border-l-8 border-r-8  border shadow-2xl ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className="card-body flex justify-center items-center">
              <div className="">
              <h2 className="card-title">Mock Interview Sessions</h2>
@@ -45,7 +47,7 @@ const SpecialService = () => {
              </div>
             </div>
           </div>
-          <div className="card bg-base-100 border-l-8  border-r-8 border-[#8e67f1] border shadow-2xl">
+          <div className={`card bg-base-100 border-[#8e67f1] border-l-8 border-r-8  border shadow-2xl ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className="card-body flex justify-center items-center">
               <div className="">
               <h2 className="card-title">Career Pathway Counseling</h2>
@@ -59,7 +61,7 @@ const SpecialService = () => {
               
             </div>
           </div>
-          <div className="card bg-base-100 border-[#8e67f1] border-l-8  border-r-8  border shadow-2xl">
+          <div className={`card bg-base-100 border-[#8e67f1] border-l-8 border-r-8  border shadow-2xl ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className="card-body flex justify-center items-center">
              <div className="">
              <h2 className="card-title">Online Workshop Coordination</h2>

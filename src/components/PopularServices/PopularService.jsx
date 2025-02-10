@@ -40,26 +40,30 @@ const PopularService = () => {
           levels.
         </p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 md:gap-10 my-20">
-        {PopularServicesLoader ? (
-          <div className="flex justify-center items-center h-screen">
-            <span className="loading loading-ring loading-lg"></span>
-          </div>
-        ) : (
-          popularServices?.map((popularService, index) => (
+      {PopularServicesLoader ? (
+        <div className="flex justify-center items-center h-screen">
+          <span className="loading loading-ring loading-lg"></span>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 md:gap-10 my-20">
+          {popularServices?.map((popularService, index) => (
             <SinglePopularService
               key={index}
               popularService={popularService}
             ></SinglePopularService>
-          ))
-        )}
-      </div>
+          ))}
+        </div>
+      )}
+
       <div className="flex justify-center items-center ">
         <NavLink className="" to="/allServices">
-          <button className="btn hover:translate-x-4 duration-700 flex gap-2 bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white">All Services <button><FaLongArrowAltRight></FaLongArrowAltRight></button></button>
-          
+          <button className="btn hover:translate-x-4 duration-700 flex gap-2 bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white">
+            All Services{" "}
+            <button>
+              <FaLongArrowAltRight></FaLongArrowAltRight>
+            </button>
+          </button>
         </NavLink>
-        
       </div>
     </div>
   );
