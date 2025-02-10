@@ -7,9 +7,11 @@ import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Register = () => {
   const { createUser, updateUserProfile, regex } = useContext(AuthContext);
+  const {theme} = useContext(ThemeContext)
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState({});
@@ -76,7 +78,7 @@ const Register = () => {
                 type="text"
                 placeholder="Name"
                 name="name"
-                className="input input-bordered"
+                className="input input-bordered text-black"
                 required
               />
             </div>
@@ -88,7 +90,7 @@ const Register = () => {
                 type="text"
                 placeholder="PhotoURl"
                 name="photoURL"
-                className="input input-bordered"
+                className="input input-bordered text-black"
                 required
               />
             </div>
@@ -100,7 +102,7 @@ const Register = () => {
                 type="email"
                 placeholder="email"
                 name="email"
-                className="input input-bordered"
+                className="input input-bordered text-black"
                 required
               />
               {errorMessage.register && (
@@ -119,7 +121,7 @@ const Register = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
                 name="password"
-                className="input input-bordered"
+                className="input input-bordered text-black"
                 required
               />
               <div
@@ -143,12 +145,17 @@ const Register = () => {
                   </span>
                 </label>
               )}
-              <label className="text-sm py-3">
+              <p
+                className={`text-sm p-3 ${
+                  theme === "light" ? "" : "dark:text-black"
+                }`}
+              >
                 Already have an account ? Please{" "}
                 <Link to="/login" className="text-[#8e67f1]">
+                  {" "}
                   Login
                 </Link>
-              </label>
+              </p>
             </div>
             <div className="form-control mt-6">
               <button className="btn bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white">

@@ -7,9 +7,11 @@ import { AuthContext } from "../../components/AuthProvider/AuthProvider";
 import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Login = () => {
   const { createSignInUser, regex } = useContext(AuthContext);
+  const {theme} = useContext(ThemeContext)
   const navigate = useNavigate();
   const location = useLocation();
   const [showPassword, setShowPassword] = useState(false);
@@ -67,7 +69,7 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input input-bordered text-black"
                 {...register("email", { required: "Email is required" })}
               />
               {errors.email && (
@@ -83,7 +85,7 @@ const Login = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
-                className="input input-bordered"
+                className="input input-bordered text-black"
                 {...register("password", {
                   required: "Password is required",
                 })}
@@ -104,10 +106,10 @@ const Login = () => {
                   Forgot password?
                 </a>
               </label>
-              <p className="text-sm">
-                Don't have an account? Please
-                <Link to="/register" className="text-[#8e67f1]">
-                  Register
+              <p className={`text-sm ${
+                    theme === "light" ? "" : "dark:text-black"
+                  }`}>
+                Don't have an account ? Please <Link to="/register" className="text-[#8e67f1]"> Register
                 </Link>
               </p>
             </div>

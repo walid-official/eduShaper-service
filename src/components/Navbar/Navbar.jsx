@@ -20,49 +20,25 @@ const Navbar = () => {
         to="/"
         className="hover:text-[#774ede] transition-colors duration-200"
       >
-        <li
-          className={`py-2 font-bold hover:text-[#774ede] transition-colors duration-200 ${
-            theme === "light" ? "" : "dark:text-black"
-          }`}
-        >
-          Home
-        </li>
+        <li className="py-2 font-bold">Home</li>
       </NavLink>
       <NavLink
         to="/allServices"
         className="hover:text-[#774ede] transition-colors duration-200"
       >
-        <li
-          className={`py-2 font-bold hover:text-[#774ede] transition-colors duration-200 ${
-            theme === "light" ? "" : "dark:text-black"
-          }`}
-        >
-          Services
-        </li>
+        <li className="py-2 font-bold">Services</li>
       </NavLink>
       <NavLink
         to="/about"
         className="hover:text-[#774ede] transition-colors duration-200"
       >
-        <li
-          className={`py-2 font-bold hover:text-[#774ede] transition-colors duration-200 ${
-            theme === "light" ? "" : "dark:text-black"
-          }`}
-        >
-          About
-        </li>
+        <li className="py-2 font-bold">About</li>
       </NavLink>
       <NavLink
         to="/contact"
         className="hover:text-[#774ede] transition-colors duration-200"
       >
-        <li
-          className={`py-2 font-bold hover:text-[#774ede] transition-colors duration-200 ${
-            theme === "light" ? "" : "dark:bg-black dark:text-white"
-          }`}
-        >
-          Contact
-        </li>
+        <li className="py-2 font-bold">Contact</li>
       </NavLink>
       {user && (
         <li>
@@ -148,7 +124,9 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-lg"
+              className={`menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-lg ${
+                theme === "light" ? "" : "dark:text-black"
+              }`}
             >
               {Links}
             </ul>
