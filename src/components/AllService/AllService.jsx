@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const AllService = ({ singleService }) => {
+const AllService = ({ singleService,theme }) => {
   const {
     _id,
     serviceName,
@@ -25,16 +25,16 @@ const AllService = ({ singleService }) => {
               />
             </figure>
             <div className="card-body">
-              <h2 className="text-2xl font-extrabold">{serviceName}</h2>
-              <h2 className="font-bold">{serviceArea}</h2>
-              <p>{description.slice(0, 120)}...</p>
+              <h2 className={`text-2xl font-extrabold ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:text-black"}`}>{serviceName}</h2>
+              <h2 className={`font-bold ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:text-black"}`}>{serviceArea}</h2>
+              <p className={`font-bold py-3 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:text-black"}`}>{description.slice(0, 120)}...</p>
               <div className="flex py-3 gap-2">
                 <img
-                  className="w-12 h-12 rounded-full"
+                  className="w-12 h-12 object-cover rounded-full"
                   src={serviceProviderData?.photoURL}
                   alt=""
                 />
-                <h2 className="font-bold py-3">{serviceProviderData?.name}</h2>
+                <h2 className={`font-bold py-3 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : " dark:text-black"}`}>{serviceProviderData?.name}</h2>
               </div>
               <div className="card-actions justify-start">
                 <button

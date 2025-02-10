@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { SiMinutemailer } from "react-icons/si";
@@ -6,9 +6,10 @@ import { LiaAddressCardSolid } from "react-icons/lia";
 import mail from "../assets/images/mail2.gif"
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Contact = () => {
-
+  const { theme, toggleTheme } = useContext(ThemeContext);
     const form = useRef();
     const sendEmail = (e) => {
       e.preventDefault();
@@ -34,7 +35,7 @@ const Contact = () => {
 
 
   return (
-    <div>
+    <div className={` ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
       <div className="bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white py-12">
         <h2 className="font-bold text-center text-4xl">Contact Us</h2>
 
@@ -51,7 +52,7 @@ const Contact = () => {
       </div>
       <div className="w-11/12 mx-auto  pt-10">
         <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-4">
-          <div className="card border rounded-none bg-base-100  shadow-xl hover:shadow-lg duration-300">
+          <div className={`card border rounded-none bg-base-100  shadow-xl hover:shadow-lg duration-300 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className=" py-6 flex gap-5">
               <div className="">
                 <h2 className="text-white p-5 bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-3xl">
@@ -68,7 +69,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="card border rounded-none bg-base-100  shadow-xl hover:shadow-lg duration-300">
+          <div className={`card border rounded-none bg-base-100  shadow-xl hover:shadow-lg duration-300 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className=" py-6 flex gap-5">
               <div className="">
                 <h2 className="text-white p-5 bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-3xl">
@@ -85,7 +86,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="card border pr-3 rounded-none bg-base-100  shadow-xl hover:shadow-lg duration-300">
+          <div className={`card border rounded-none bg-base-100  shadow-xl hover:shadow-lg duration-300 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <div className=" py-6 flex gap-5">
               <div className="">
                 <h2 className="text-white p-4 bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-4xl">
@@ -112,8 +113,8 @@ const Contact = () => {
             <div className="card w-full shadow-2xl">
             <form ref={form} onSubmit={sendEmail}  className="card-body">
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-black">Name</span>
+                <label className={`label ${theme === "light" ? " text-black" : "dark:bg-gray-900 dark:text-white"}`}>
+                  <span className="">Name</span>
                 </label>
                 <input
                   type="name"
@@ -124,8 +125,8 @@ const Contact = () => {
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-black">Email</span>
+              <label className={`label ${theme === "light" ? " text-black" : "dark:bg-gray-900 dark:text-white"}`}>
+                  <span className="">Email</span>
                 </label>
                 <input
                   type="email"
@@ -136,8 +137,8 @@ const Contact = () => {
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text text-black">Message</span>
+              <label className={`label ${theme === "light" ? " text-black" : "dark:bg-gray-900 dark:text-white"}`}>
+                  <span className="">Message</span>
                 </label>
                 <textarea
                   type="text"

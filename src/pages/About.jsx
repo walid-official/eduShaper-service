@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaQuoteLeft } from "react-icons/fa";
+import { ThemeContext } from "../context/ThemeContext";
 const About = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div>
       <div className="bg-gradient-to-r from-[#774ede] to-[#8e67f1cb]  text-white py-10">
         <h2 className="font-bold text-center text-4xl">About Us</h2>
 
         <div className="flex justify-center py-3 gap-2 ">
-          <Link to="/" className="font-bold">Home</Link>
+          <Link to="/" className="font-bold">
+            Home
+          </Link>
           <p className="">-</p>
 
-          <Link to="/about" className="font-bold">About</Link>
+          <Link to="/about" className="font-bold">
+            About
+          </Link>
         </div>
       </div>
 
@@ -84,7 +90,13 @@ const About = () => {
           <p className="font-bold text-5xl text-[#8e67f1] flex justify-center">
             <FaQuoteLeft />
           </p>
-          <p className="font-bold sm:w-[50%] mx-auto sm:mx-0 text-center sm:text-left py-4 sm:py-0">
+          <p
+            className={`font-bold sm:w-[50%] mx-auto sm:mx-0 text-center sm:text-left py-4 sm:py-0 ${
+              theme === "light"
+                ? "backdrop-blur-xl bg-white/30"
+                : "dark:text-black"
+            }`}
+          >
             We believe that learning should be accessible, engaging, and
             transformative. Our mission is to empower you to reach your fullest
             potential, no matter where you start. Together, let’s unlock new
@@ -94,7 +106,7 @@ const About = () => {
       </div>
       <div className="w-11/12 mx-auto">
         <div className="">
-          <div className="pt-8">
+          <div className={`pt-8 ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <h2 className="font-bold text-center text-3xl">
               What Make Us Spcecial?
             </h2>
@@ -111,16 +123,13 @@ const About = () => {
                   alt="Shoes"
                 />
               </figure>
-              <div className="card-body">
+              <div  className={`card-body ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <h2 className="card-title">Who We Are</h2>
                 <p>
                   We are a dedicated team focused on providing exceptional
                   educational services that inspire growth, passion, and
                   lifelong learning for every individual.
                 </p>
-                {/* <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
-                </div> */}
               </div>
             </div>
             <div className="card bg-base-100 md:w-96 rounded-none shadow-xl">
@@ -130,7 +139,7 @@ const About = () => {
                   alt="Shoes"
                 />
               </figure>
-              <div className="card-body">
+              <div className={`card-body ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <h2 className="card-title">What We Do</h2>
                 <p>
                   We offer personalized educational services, including career
@@ -150,7 +159,7 @@ const About = () => {
                   alt="Shoes"
                 />
               </figure>
-              <div className="card-body">
+              <div className={`card-body ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <h2 className="card-title">How It Works</h2>
                 <p>
                   We assess your needs, create a personalized plan, and provide

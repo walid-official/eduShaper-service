@@ -4,9 +4,11 @@ import axios from "axios";
 import SingleManageService from "../components/SingleManageService/SingleManageService";
 import Swal from "sweetalert2";
 import useAxios from "../components/Hook/useAxios";
+import { ThemeContext } from "../context/ThemeContext";
 
 const ManageService = () => {
   const { user } = useContext(AuthContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   console.log(user?.email);
   const axiosSecure = useAxios();
   const [manageServices, setManageServices] = useState([]);
@@ -73,6 +75,7 @@ const ManageService = () => {
         manageServices.map((manageService, index) => (
           <SingleManageService
             key={index}
+            theme={theme}
             handleDeleteService={handleDeleteService}
             manageService={manageService}
           ></SingleManageService>

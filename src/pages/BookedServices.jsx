@@ -3,10 +3,12 @@ import { AuthContext } from "../components/AuthProvider/AuthProvider";
 import axios from "axios";
 import SingleBookService from "../components/SingleBookService/SingleBookService";
 import useAxios from "../components/Hook/useAxios";
+import { ThemeContext } from "../context/ThemeContext";
 
 
 const BookedServices = () => {
   const { user } = useContext(AuthContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   console.log(user?.email);
   const axiosSecure = useAxios()
   const [bookedServices, setBookedServices] = useState([]);
@@ -42,6 +44,7 @@ const BookedServices = () => {
         bookedServices.map((bookService, index) => (
           <SingleBookService
             key={index}
+            theme={theme}
             bookService={bookService}
           ></SingleBookService>
         ))

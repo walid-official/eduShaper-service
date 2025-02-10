@@ -3,7 +3,7 @@ import { format } from "date-fns";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 
-const SingleServiceToDo = ({ bookToDo }) => {
+const SingleServiceToDo = ({ bookToDo,theme }) => {
   const {
     serviceName,
     serviceId,
@@ -59,7 +59,7 @@ const SingleServiceToDo = ({ bookToDo }) => {
     <div>
       <div className="md:w-[70%] w-[90%] mx-auto my-10">
         <div className="">
-          <div className="grid md:grid-cols-3 p-4 bg-base-100 shadow-xl">
+          <div className={`grid md:grid-cols-3 p-4 bg-base-100 shadow-xl ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <figure className="flex justify-center border-r items-center">
               <img
                 className="rounded-full w-[150px]  h-[150px] object-cover border-[#8e67f1] border-b-4"
@@ -94,7 +94,7 @@ const SingleServiceToDo = ({ bookToDo }) => {
                 <select
                   defaultValue={serviceStatus || "Booked Service Status"}
                   onChange={(e) => handleStatusChange(e, _id)}
-                  className="select select-bordered w-full max-w-xs"
+                  className="select select-bordered w-full max-w-xs text-black"
                 >
                   <option disabled>Booked Service Status</option>
                   <option>pending</option>

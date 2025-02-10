@@ -3,9 +3,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../components/AuthProvider/AuthProvider';
 import SingleServiceToDo from '../components/SingleServiceToDo/SingleServiceToDo';
 import useAxios from '../components/Hook/useAxios';
+import { ThemeContext } from '../context/ThemeContext';
 
 const ServiceToDo = () => {
     const {user} = useContext(AuthContext)
+    const { theme, toggleTheme } = useContext(ThemeContext);
     const [bookedToDoServices, setBookedServices] = useState([]);
     const axiosSecure = useAxios()
   useEffect(() => {
@@ -27,7 +29,7 @@ const ServiceToDo = () => {
 
     return (
         <div>
-            {bookedToDoServices.length === 0 ? <h2 className='font-bold flex justify-center items-center h-screen  text-center text-3xl'>Nobody is Booked Your Service!!</h2> : bookedToDoServices.map((bookToDo,index) => <SingleServiceToDo key={index} bookToDo={bookToDo} ></SingleServiceToDo> )  }
+            {bookedToDoServices.length === 0 ? <h2 className='font-bold flex justify-center items-center h-screen  text-center text-3xl'>Nobody is Booked Your Service!!</h2> : bookedToDoServices.map((bookToDo,index) => <SingleServiceToDo theme={theme} key={index} bookToDo={bookToDo} ></SingleServiceToDo> )  }
         </div>
     );
 };

@@ -71,7 +71,7 @@ const axiosSecure = useAxios()
                   <input
                     type="text"
                     placeholder="Service Name"
-                    className="input input-bordered w-full"
+                    className="input input-bordered text-black w-full "
                     name="serviceName"
                     required
                   />
@@ -83,7 +83,7 @@ const axiosSecure = useAxios()
                   <input
                     type="text"
                     placeholder="PhotoURl"
-                    className="input input-bordered w-full"
+                    className="input input-bordered text-black w-full"
                     name="servicePhoto"
                     required
                   />
@@ -98,7 +98,7 @@ const axiosSecure = useAxios()
                   type="text"
                   placeholder="Price"
                   name="price"
-                  className="input input-bordered"
+                  className="input input-bordered text-black"
                   required
                 />
               </div>
@@ -110,7 +110,7 @@ const axiosSecure = useAxios()
                   type="text"
                   placeholder="Service Area"
                   name="serviceArea"
-                  className="input input-bordered"
+                  className="input input-bordered text-black"
                   required
                 />
               </div>

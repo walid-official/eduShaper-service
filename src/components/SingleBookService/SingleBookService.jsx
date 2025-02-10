@@ -2,7 +2,7 @@
 import { format } from "date-fns";
 import React from "react";
 
-const SingleBookService = ({ bookService }) => {
+const SingleBookService = ({ bookService,theme }) => {
   const {
     serviceName,
     serviceImage,
@@ -28,7 +28,7 @@ const SingleBookService = ({ bookService }) => {
     <div>
       <div className="lg:w-[70%] w-[85%] mx-auto my-10">
         <div className="">
-          <div className="grid md:grid-cols-3 p-4 bg-base-100 shadow-xl">
+          <div className={`grid md:grid-cols-3 p-4 bg-base-100 shadow-xl ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
             <figure className="flex justify-center border-r items-center">
               <img
                 className="rounded-full w-[250px]  h-[250px] object-cover border-[#8e67f1] border-b-4"

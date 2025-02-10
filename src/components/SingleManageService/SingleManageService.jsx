@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SingleManageService = ({ manageService, handleDeleteService }) => {
+const SingleManageService = ({ manageService, handleDeleteService,theme }) => {
   const {
     _id,
     serviceName,
@@ -14,9 +14,9 @@ const SingleManageService = ({ manageService, handleDeleteService }) => {
   } = manageService || {};
 
   return (
-    <div className="md:w-[70%] w-[90%] mx-auto my-10">
+    <div className="md:w-[70%] w-[90%] mx-auto my-10" >
       <div className="">
-        <div className="grid md:grid-cols-2 p-4 bg-base-100 shadow-xl">
+        <div className={`grid md:grid-cols-2 p-4  shadow-xl ${theme === "light" ? "bg-base-100 text-black" : "dark:bg-gray-900 dark:text-white"}`}>
           <figure className="flex justify-center items-center">
             <img
               className="rounded-full w-[250px]  h-[250px] object-cover border-[#8e67f1] border-b-4"

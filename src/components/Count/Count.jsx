@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import counterImg from "../../assets/images/counter.png"
+import { ThemeContext } from "../../context/ThemeContext";
 const Count = () => {
   const [counterOn, setCounterOn] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <div className="w-11/12 mx-auto pt-10 pb-5" >
       <div className="py-10">
@@ -35,7 +37,7 @@ const Count = () => {
           >
             <div className="grid md:grid-cols-2 py-20 gap-8 justify-between">
               {/* Counter 1 */}
-              <div className="text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598]">
+              <div className={`text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598] ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <div className="">
                   <div className=" text-6xl font-bold w-full">
                     {counterOn && <CountUp end={58.6} />}K
@@ -50,7 +52,7 @@ const Count = () => {
                 </div>
               </div>
               {/* Counter 2 */}
-              <div className="text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598]">
+              <div className={`text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598] ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <div className="">
                   <div className=" text-6xl font-bold w-full">
                     {counterOn && <CountUp end={36} />}K
@@ -65,7 +67,7 @@ const Count = () => {
                 </div>
               </div>
               {/* Counter 3 */}
-              <div className="text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598]">
+              <div className={`text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598] ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <div className="">
                   <div className=" text-6xl font-bold w-full">
                     {counterOn && <CountUp end={20} />}K
@@ -80,7 +82,7 @@ const Count = () => {
                 </div>
               </div>
               {/* Counter 4 */}
-              <div className="text-center border shadow-2xl w-[200px] h-[200px] border-[#8e67f1] border-b-8 flex justify-center items-center rounded-full p-3 text-[#5e3598]">
+              <div className={`text-center shadow-2xl w-[200px] h-[200px] flex justify-center items-center border-[#8e67f1] border-b-8  border rounded-full p-3 text-[#5e3598] ${theme === "light" ? "backdrop-blur-xl bg-white/30" : "dark:bg-gray-900 dark:text-white"}`}>
                 <div className="">
                 <div className=" text-6xl font-bold">
                   {counterOn && <CountUp end={99} />}K
