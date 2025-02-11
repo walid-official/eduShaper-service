@@ -26,7 +26,7 @@ const Hero = () => {
               {" "}
               <div className="md:flex">
                 <div className="flex flex-col justify-center">
-                  <h2 className="font-bold text-5xl">Homework Help Hub</h2>
+                  <h2 className="font-bold md:text-5xl sm:text-4xl text-3xl">Homework Help Hub</h2>
                   <h2 className="font-bold text-2xl py-2">
                     Study Success Zone
                   </h2>
@@ -37,7 +37,7 @@ const Hero = () => {
                     understanding scientific concepts.
                   </p>
                 </div>
-                <div className="w-full flex justify-end">
+                <div className="w-full flex md:justify-end justify-center">
                   <img
                     className="w-full"
                     src="https://pixcap.com/cdn/library/template/1723654624011/thumbnail/Two_Employees_Are_Working_Together_In_Front_Of_The_Desk_3D_Illustration_transparent_800_emp.webp"
@@ -50,7 +50,7 @@ const Hero = () => {
           <SwiperSlide>
             {" "}
             <div className="md:flex">
-              <div className="w-full">
+              <div className="w-full flex md:justify-start justify-center">
                 <img
                   className="w-full"
                   src="https://cdn.prod.website-files.com/6364b6fd26e298b11fb9391f/6364b6fd26e298b303b93d91_3d-tb-education.png"
@@ -59,7 +59,7 @@ const Hero = () => {
               </div>
               <div className="flex flex-col justify-center">
                 <div className="">
-                  <h2 className="font-bold  text-5xl">Knowledge Boost Hub</h2>
+                  <h2 className="font-bold  md:text-5xl sm:text-4xl text-3xl">Knowledge Boost Hub</h2>
                   <h2 className="font-bold  text-2xl py-2">LearnPro Academy</h2>
                   <p className="md:w-[80%]  text-sm py-3">
                     Empowering students to enhance their understanding of
@@ -75,7 +75,7 @@ const Hero = () => {
             {" "}
             <div className="md:flex">
               <div className="flex flex-col justify-center">
-                <h2 className="font-bold text-5xl">Exam Edge Program</h2>
+                <h2 className="font-bold md:text-5xl sm:text-4xl text-3xl">Exam Edge Program</h2>
                 <h2 className="font-bold text-2xl py-2">
                   Test Triumph Program
                 </h2>
@@ -86,7 +86,7 @@ const Hero = () => {
                   effective study methods, time management skills.
                 </p>
               </div>
-              <div className="w-full flex justify-end">
+              <div className="w-full flex md:justify-end justify-center">
                 <img
                   className="w-full"
                   src="https://pixcap.com/cdn/library/template/1723748503236/thumbnail/Passion_In_Learning_3D_Illustration_transparent_emp_800.webp"
