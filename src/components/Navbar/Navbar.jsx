@@ -35,6 +35,12 @@ const Navbar = () => {
         <li className="py-2 font-bold">About</li>
       </NavLink>
       <NavLink
+        to="/faq"
+        className="hover:text-[#774ede] transition-colors duration-200"
+      >
+        <li className="py-2 font-bold">FAQ</li>
+      </NavLink>
+      <NavLink
         to="/contact"
         className="hover:text-[#774ede] transition-colors duration-200"
       >

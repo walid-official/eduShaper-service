@@ -2,9 +2,9 @@ import React from "react";
 import QuestionImg from "../../assets/images/question.png";
 const Question = () => {
   return (
-    // className="py-10 bg-center bg-cover" style={{backgroundImage: `url(https://img.freepik.com/premium-vector/abstract-floral-shape-ornament-design_9148-1926.jpg?ga=GA1.1.1662778785.1716400131&semt=ais_hybrid)`}}
-    <div>
-      <div className="lg:flex w-11/12 mx-auto pb-20 pt-10">
+
+    <div className="w-11/12 mx-auto">
+      <div className="lg:flex  pb-20 pt-10">
         <div className="lg:w-[50%]" data-aos="fade-down" data-aos-mirror="false"  data-aos-once="false">
           <div className="py-8">
             <div className="flex py-8 gap-3 items-center">
@@ -84,7 +84,7 @@ const Question = () => {
           </div>
         </div>
         <div className="lg:w-[50%]">
-          <div className="flex justify-center">
+          <div className="flex lg:justify-end justify-center">
             {/* <div className="">
               <img
                 src="https://cdn.pixabay.com/animation/2024/02/25/18/24/18-24-36-228_512.gif"
