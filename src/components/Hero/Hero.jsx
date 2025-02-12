@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import "./hero.css";
 import { Pagination, Autoplay } from "swiper/modules";
 import { ThemeContext } from "../../context/ThemeContext";
+import { Link } from "react-router-dom";
 // import "react-modal-video/css/modal-video.css";
 // import ModalVideo from "react-modal-video";
 const Hero = () => {
@@ -46,6 +47,7 @@ const Hero = () => {
                     solving complex math problems, writing essays, or
                     understanding scientific concepts.
                   </p>
+                
                 </div>
                 <div className="w-full flex md:justify-end justify-center">
                   <img
@@ -73,9 +75,7 @@ const Hero = () => {
                     resources.
                   </p>
 
-                  <button className="btn border-none bg-gradient-to-r from-[#774ede] to-[#8e67f1cb] text-white hover:opacity-80 transition-opacity duration-200">
-                    Learn More
-                  </button>
+                
                 </div>
               </div>
               <div className="w-[80%] flex md:justify-end justify-center">
@@ -103,6 +103,7 @@ const Hero = () => {
                   unwavering confidence needed to excel in exams. By focusing on
                   effective study methods, time management skills.
                 </p>
+              
               </div>
               <div className="w-full flex md:justify-end justify-center">
                 <img
