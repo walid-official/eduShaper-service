@@ -45,7 +45,7 @@ const Navbar = () => {
           <details className="dropdown">
             <summary
               className={`font-bold hover:text-[#774ede] transition-colors duration-200 cursor-pointer ${
-                theme === "light" ? "" : "dark:text-black"
+                theme === "light" ? "" : "dark:text-white"
               }`}
             >
               Dashboard

@@ -1,5 +1,6 @@
 import React from "react";
 import footerLogo from "../../assets/images/logo4.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     // className="bg-center bg-cover text-white" style={{backgroundImage: `url(https://t3.ftcdn.net/jpg/04/95/12/38/360_F_495123890_u9dfRTJx2MrYXWs8Rd1eUibMAeVyXXP9.jpg)`}}
@@ -29,23 +30,23 @@ const Footer = () => {
 
         <div className="pt-10">
           <h6 className="footer-title">Services</h6>
-          <a className="link link-hover block">Add Service</a>
-          <a className="link link-hover block">Manage Service</a>
-          <a className="link link-hover block">Booked Service</a>
-          <a className="link link-hover block">Service-To-Do</a>
+          <Link to="/add-service" className="link link-hover block">Add Service</Link>
+          <Link to="/ManageService" className="link link-hover block">Manage Service</Link>
+          <Link to="/BookedServices" className="link link-hover block">Booked Service</Link>
+          <Link to="/service-to-do" className="link link-hover block">Service-To-Do</Link>
         </div>
         <div className="pt-10">
           <h6 className="footer-title">Company</h6>
-          <a className="link link-hover block">About us</a>
-          <a className="link link-hover block">Contact</a>
-          <a className="link link-hover block">Jobs</a>
-          <a className="link link-hover block">Press kit</a>
+          <Link to="/about" className="link link-hover block">About us</Link>
+          <Link to="/contact" className="link link-hover block">Contact</Link>
+          <a href="https://bdjobs.com/" target="_blank" className="link link-hover block">Jobs</a>
+          <a href="https://www.prezly.com/academy/press-kit-101-what-to-include-to-get-earned-media-coverage" target="_blank" className="link link-hover block">Press kit</a>
         </div>
         <div className="pt-10">
           <h6 className="footer-title">Legal</h6>
-          <a className="link link-hover block">Terms of use</a>
-          <a className="link link-hover block">Privacy policy</a>
-          <a className="link link-hover block">Cookie policy</a>
+          <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank" className="link link-hover block">Terms of use</a>
+          <a href="https://www.privacypolicygenerator.info/" target="_blank" className="link link-hover block">Privacy policy</a>
+          <a href="https://www.accenture.com/us-en/support/company-cookies-similar-technology" target="_blank" className="link link-hover block">Cookie policy</a>
         </div>
       </footer>
       <footer className="footer w-11/12 mx-auto px-14 py-8 items-center p-4">
